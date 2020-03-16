@@ -17,6 +17,19 @@
     
     
     <entry>
+      <title>计算机组成原理学习题目</title>
+      <link href="/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E9%A2%98%E7%9B%AE/"/>
+      <url>/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E9%A2%98%E7%9B%AE/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1、某存储器容量为32K X 16位 则地址线有多少根，数据线有多少根，怎么得来的？<br>解答：我觉得好像就是 32<em>1024个存储单位每一个存储单位是16位如果是 32</em>1024个单位就有15条地址线 因为2的15此方就是32K 也就是必须有32个不同的数标志着每一个地址因为每一个存贮单位是16位的所以数据线有16跟<br>2、某计算机的字长是16位，它的存储器容量是64KB，若按字编址那么它的最大寻址范围是<br>解答：某计算机的字长是16位，它的存储器容量是64KB，若按字编址那么它的最大寻址范围是32K。<br>因为该计算机的字长是16位，每个存储单元1个字节，1字节等于8位，所以相当于2个字节。又因为他的存储器容量是64KB，则说明有64K个字节，64/2=32。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>win10第一次安装数据库失败解决方案</title>
       <link href="/2020/03/15/win10%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%89%E8%A3%85%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2020/03/15/win10%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%89%E8%A3%85%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
