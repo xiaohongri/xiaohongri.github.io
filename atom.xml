@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-15T12:31:34.950Z</updated>
+  <updated>2020-03-16T05:28:10.665Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>参考的博客（实验室项目）</title>
+    <link href="http://yoursite.com/2020/03/16/%E5%8F%82%E8%80%83%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2020/03/16/%E5%8F%82%E8%80%83%E7%9A%84%E5%8D%9A%E5%AE%A2/</id>
+    <published>2020-03-16T08:31:07.000Z</published>
+    <updated>2020-03-16T05:28:10.665Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>参考链接：<br>linux 编译指定库、头文件的路径问题  <a href="https://blog.csdn.net/jiaweizou/article/details/8153897" target="_blank" rel="noopener">https://blog.csdn.net/jiaweizou/article/details/8153897</a><br>gcc指定头文件路径及动态链接库路径 <a href="https://www.cnblogs.com/lidabo/p/5565827.html" target="_blank" rel="noopener">https://www.cnblogs.com/lidabo/p/5565827.html</a><br>gcc如何指定编译头文件的位置 <a href="https://www.jianshu.com/p/7d0f9d987dc9" target="_blank" rel="noopener">https://www.jianshu.com/p/7d0f9d987dc9</a><br>Makefile经典教程(掌握这些足够) <a href="https://blog.csdn.net/ruglcc/article/details/7814546/" target="_blank" rel="noopener">https://blog.csdn.net/ruglcc/article/details/7814546/</a><br>Linux下Makefile的编写及四个特殊符号的意义@、$@、$^、$ <a href="https://blog.csdn.net/runfarther/article/details/50036115" target="_blank" rel="noopener">https://blog.csdn.net/runfarther/article/details/50036115</a><br>网络高并发服务器之epoll接口、epoll反应堆模型详解及代码实现 <a href="https://blog.csdn.net/qq_36359022/article/details/81355897" target="_blank" rel="noopener">https://blog.csdn.net/qq_36359022/article/details/81355897</a><br>doxygen安装(doxygen的编译依靠cmake) <a href="https://blog.csdn.net/yamida/article/details/79428515" target="_blank" rel="noopener">https://blog.csdn.net/yamida/article/details/79428515</a><br>mqtt.fx的安装和使用 <a href="https://blog.csdn.net/nicholaszao/article/details/79211965" target="_blank" rel="noopener">https://blog.csdn.net/nicholaszao/article/details/79211965</a><br>Ubuntu常见问题解决方法 <a href="https://blog.csdn.net/xmy306538517/article/details/73469816" target="_blank" rel="noopener">https://blog.csdn.net/xmy306538517/article/details/73469816</a><br>Ubuntu上搭建EMQ MQTT服务器 <a href="https://www.jianshu.com/p/ebbe25d1c4b2?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">https://www.jianshu.com/p/ebbe25d1c4b2?tdsourcetag=s_pctim_aiomsg</a><br>梯形图基础教程 <a href="https://blog.csdn.net/lhyhb/article/details/81675997" target="_blank" rel="noopener">https://blog.csdn.net/lhyhb/article/details/81675997</a><br>PLC梯形图编程基础知识详解 <a href="https://blog.csdn.net/silverywings/article/details/76725239" target="_blank" rel="noopener">https://blog.csdn.net/silverywings/article/details/76725239</a><br>SecureCRT的安装与破解（过程很详细！！！） <a href="https://www.cnblogs.com/yjd_hycf_space/p/7729796.html" target="_blank" rel="noopener">https://www.cnblogs.com/yjd_hycf_space/p/7729796.html</a><br>KepServer 6.5安装 <a href="https://blog.csdn.net/han_better/article/details/81624924" target="_blank" rel="noopener">https://blog.csdn.net/han_better/article/details/81624924</a><br>通信报文格式及编码举例 <a href="https://blog.csdn.net/zzlyx99/article/details/82588164" target="_blank" rel="noopener">https://blog.csdn.net/zzlyx99/article/details/82588164</a><br>写出稳定的Modbus代码之点滴经验 <a href="https://www.cnblogs.com/pingwen/p/6691625.html" target="_blank" rel="noopener">https://www.cnblogs.com/pingwen/p/6691625.html</a><br>Linux 下串口编程入门 <a href="https://www.ibm.com/developerworks/cn/linux/l-serials/" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/linux/l-serials/</a><br>libmodbus库的移植与使用 <a href="https://blog.csdn.net/wise18146705004/article/details/85170348" target="_blank" rel="noopener">https://blog.csdn.net/wise18146705004/article/details/85170348</a><br>libmodbus官方手册中文翻译 <a href="https://blog.csdn.net/qq_23670601/article/details/82155378" target="_blank" rel="noopener">https://blog.csdn.net/qq_23670601/article/details/82155378</a><br>PLC-串口通信实例 <a href="https://blog.csdn.net/yqj234/article/details/78158931" target="_blank" rel="noopener">https://blog.csdn.net/yqj234/article/details/78158931</a><br>FX-3U PLC串口与PC通信调试 <a href="https://blog.csdn.net/GuiH168/article/details/46559227" target="_blank" rel="noopener">https://blog.csdn.net/GuiH168/article/details/46559227</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>win10第一次安装数据库失败解决方案</title>
@@ -276,6 +298,50 @@
     <updated>2020-03-15T12:28:22.243Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>sprintf(“a,b,c”);<br>a要转换成的字符串<br>b–”%d”<br>c要转换的数字</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Paho -物联网 MQTT C Cient的实现和详解</title>
+    <link href="http://yoursite.com/2018/12/07/Paho%20-%E7%89%A9%E8%81%94%E7%BD%91%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%92%8C%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://yoursite.com/2018/12/07/Paho%20-%E7%89%A9%E8%81%94%E7%BD%91%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%92%8C%E8%AF%A6%E8%A7%A3/</id>
+    <published>2018-12-07T08:31:07.000Z</published>
+    <updated>2020-03-16T05:16:09.446Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>参考链接：<a href="https://www.cnblogs.com/homejim/p/8196763.html" target="_blank" rel="noopener">https://www.cnblogs.com/homejim/p/8196763.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Paho - MQTT C Cient的实现</title>
+    <link href="http://yoursite.com/2018/12/06/Paho%20-%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://yoursite.com/2018/12/06/Paho%20-%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0/</id>
+    <published>2018-12-06T08:31:07.000Z</published>
+    <updated>2020-03-16T05:14:48.888Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>参考链接：<a href="https://blog.csdn.net/weixin_37139197/article/details/78934961" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37139197/article/details/78934961</a></p>]]></content>
     
     <summary type="html">
     
