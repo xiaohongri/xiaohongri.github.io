@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 科学、学习、人情世故">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="c++总结, 科学、学习、人情世故">
+    <meta name="description" content="const在不同位置时的不同意义指针类型前：
+声明一个指向常量的指针，程序中不能通过指针来改变它所指向的值，但指针本身的值可以改变，即指针可以指向其他数据；
+“*”号和指针名之间，声明一个指针常量(常指针)，指针本身的值不可改变，即不能指向">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | 魏尔肖的blog</title>
+    <title>c++总结 | 魏尔肖的blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">c++总结</h1>
                 </div>
             </div>
         </div>
@@ -438,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-14
+                    2019-09-17
                 </div>
                 
 
@@ -447,14 +449,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 				
@@ -470,15 +472,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <p>const在不同位置时的不同意义指针类型前：</p>
+<p>声明一个指向常量的指针，程序中不能通过指针来改变它所指向的值，但指针本身的值可以改变，即指针可以指向其他数据；</p>
+<p>“*”号和指针名之间，声明一个指针常量(常指针)，指针本身的值不可改变，即不能指向其他数据，但指向的数据的值可以改变<br>两个地方都加，声明指向常量的指针常量，指针本身的值不可改变，指向的数据也不能通过指针改变</p>
+<p>函数指针使用函数指针之前，必须先赋值，使它指向一个函数入口地址，赋值语法格式为：函数指针名 = 函数名，其中函数名代表的函数必须是一个已经定义过的，和函数指针具有相同返回类型的函数，</p>
+<p>指针调用函数格式：(*指针变量)(实参列表)<br>访问权限public：可被任意实体访问<br>protected：只允许本类及子类的成员函数访问<br>private：只允许本类的成员函数访问</p>
+<p>构造函数创建对象时，自动调用构造函数，不能在程序中直接调用，可有任意类型参数，但不能有返回类型；<br>构造函数作用：为对象分配空间、为数据成员赋初值、请求其他资源<br>构造函数工作：初始化虚函数表、建立基类对象、建立非静态数据成员对象、安置虚基类对象信息、执行构造函数体中的代码</p>
+<p>若一个类中没有定义构造函数，编译器会自动生成不带参数的默认构造函数，格式为：&lt;类名&gt;::&lt;默认构造函数名&gt;(){}析构函数析构函数作用：清除对象、释放内存<br>析构函数工作：执行析构函数中的代码、将对象占据的存储空间归还系统、做公共及用户要求的善后工作<br>析构函数无参数和返回值，一个类中只能定义一个析构函数，故不能重载，格式为：~&lt;类名&gt;();内存布局全局数据区：存放全局变量、静态数据、常量<br>代码区：存放类成员函数、其他函数代码<br>栈区：存放局部变量、函数参数、返回数据、返回地址<br>堆区：自由存储区<br>运算符重载重载形式重载为类的成员函数，参数个数比原来的运算数少一个&lt;函数类型&gt; operator &lt;运算符&gt; (&lt;形参列表&gt;){&lt;函数体&gt;;}重载为类的友元函数，参数个数与原运算数个数一样多<br>friend &lt;函数类型&gt; operator &lt;运算符&gt; (&lt;形参列表&gt;){&lt;函数体&gt;;}函数重载：返回值类型可以相同可以不同，但形参列表一定不同</p>
+<p>静态数据成员初始化格式：&lt;类型&gt;&lt;类名&gt;::&lt;静态数据成员&gt;=&lt;值&gt;<br>引用格式：&lt;类名&gt;::&lt;静态数据成员&gt;;<br>继承方式私有继承private：父类的公有成员和保护成员作为子类的的私有成员，且不能被子类的派生类访问<br>公有继承public：父类的公有成员和保护成员作为子类的成员时，仍保持原有状态，父类私有成员仍为私有<br>保护继承protected：父类的公有成员和保护成员成为子类的保护成员，且只能被他的派生类成员函数或友元访问，父类私有成员仍为私有</p>
+<p> 派生类构造函数调用顺序：调用基类的构造函数，调用顺序按继承时说明的顺序<br> 调用子对象类的构造函数，调用顺序按在类中说明的顺序<br> 派生类构造函数体中内容<br> 函数模版template &lt; 模板形参表 &gt;template <typename T>返回值类型 函数名（形式参数列表）{    函数体语句}例：template <typename T>void swap( T&amp; v1, T&amp; v2){    T temp;    temp = v1;    v1 = v2;    v2 = temp;}虚函数虚函数必须是类的成员函数，不能是友元，但可以是另一个类的友元，不能为全局函数，也不能为静态函数，析构函数可以为虚函数，但构造函数不能为虚函数</p>
+<p> 变量初始化局部变量：定义时，系统不会进行初始化<br> 全局变量：定义时，系统自动初始化，   友元函数在类中定义过，但不是成员函数，定义在类外部，但有权访问类中成员<br> this指针只有成员函数才有this指针，友元函数没有this指针<br> 静态成员函数与普通成员函数区别：静态成员函数没有this指针，只能访问静态成员（包括静态成员变量和静态成员函数）<br> 普通成员函数有this指针，可以访问类中任意成员，而静态成员函数无this指针</p>
 
             </div>
             <hr/>
@@ -504,7 +507,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/14/hello-world/">http://yoursite.com/2020/03/14/hello-world/</a>
+                    <a href="http://yoursite.com/2019/09/17/c++%E6%80%BB%E7%BB%93/">http://yoursite.com/2019/09/17/c++%E6%80%BB%E7%BB%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -710,7 +713,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-03-14T11-12-36',
+        id: '2019-09-17T16-31-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -733,7 +736,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sat Mar 14 2020 11:12:36 GMT+0800',
+    id: 'Tue Sep 17 2019 16:31:07 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -757,9 +760,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2020/03/14/hello-world/';
-        this.page.identifier = '/2020/03/14/hello-world/';
-        this.page.title = 'Hello World';
+        this.page.url = 'http://yoursite.com/2019/09/17/c++总结/';
+        this.page.identifier = '/2019/09/17/c++总结/';
+        this.page.title = 'c++总结';
     };
     let disqus_shortname = '';
 
@@ -808,24 +811,24 @@ gitment.render('gitment-content');
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/14/My-New-Post/">
+                <a href="/2020/02/15/lovestory/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="My New Post">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="lovestory">
                         
-                        <span class="card-title">My New Post</span>
+                        <span class="card-title">lovestory</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            第一次看到你的照片，我一脸嫌弃，因为我喜欢素颜，对化妆的女孩不太感兴趣，而且当得知你还比我大一岁时，我更加否定了你，可能我比较喜欢比我小的女孩，因为小一点的女孩肯定很可爱吧。第一次见到你本尊的时候，是我对你和1发出一起参加湖南毅行的时候，那
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-15
                         </span>
                         <span class="publish-author">
                             
@@ -845,24 +848,24 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/16/notebook%E6%8A%A5%E9%94%99%20ImportError_%20No%20module%20named%20___/">
+                <a href="/2019/08/19/%E5%85%B3%E4%BA%8EUbuntu%E4%B8%ADCould%20not%20get%20lock%20_var_lib_dpkg_lock%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="notebook报错 ImportError_ No module named ___">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="关于Ubuntu中Could not get lock _var_lib_dpkg_lock解决方案">
                         
-                        <span class="card-title">notebook报错 ImportError_ No module named ___</span>
+                        <span class="card-title">关于Ubuntu中Could not get lock _var_lib_dpkg_lock解决方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ImportError: No module named*先pip install *再从 d:\python\lib\site-packages中找到包将包复制到D:\ANACONDA\Lib\site-packages下，重启noteb
+                            E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)E: Unable to lock the administrati
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-19
                             </span>
                         <span class="publish-author">
                             
