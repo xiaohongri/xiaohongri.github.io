@@ -25,9 +25,12 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     
     <script src="/libs/jquery/jquery.min.js"></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
     
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="魏尔肖的blog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
 
 
 <body>
@@ -121,6 +124,58 @@
       
       <span>友情链接</span>
     </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -226,6 +281,61 @@
           
         </li>
         
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/musics " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/movies " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/books " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/galleries " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
         
         <li><div class="divider"></div></li>
         <li>
@@ -313,18 +423,7 @@
 
             <div class="description center-align">
                 
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
+                <span id="jinrishici-sentence">正在加载今日诗词....</span>
                 
             </div>
         </div>
@@ -543,6 +642,25 @@ $(function () {
     
 
     
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "57e84bea"
+        });
+        daovoice('update');
+    </script>
+    
 
     
 
@@ -555,6 +673,41 @@ $(function () {
     
 
 <embed src="//music.163.com/style/swf/widget.swf?sid=2476872430&type=0&auto=1&width=0&height=0" width="0" height="0"  allowNetworking="all" loop=true></embed>
-</body>
+
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "你忍心离开偶嘛，喔喔喔~", clearTimeout(st)) : (document.title =
+            "哈哈哈，你又来啦！", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+<!-- 1 -->
+<script type="text/javascript">
+WIDGET = {FID: 'BuNtFVKh7u'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+<!--烟花爆炸效果
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+-->
+
+<script type="text/javascript">
+//只在桌面版网页启用特效
+var windowWidth = $(window).width();
+if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+}
+</script>
 
 </html>
