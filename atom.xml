@@ -39,6 +39,28 @@
   </entry>
   
   <entry>
+    <title>arduino</title>
+    <link href="http://yoursite.com/2020/03/16/arduino/"/>
+    <id>http://yoursite.com/2020/03/16/arduino/</id>
+    <published>2020-03-16T08:31:07.000Z</published>
+    <updated>2020-03-17T08:57:00.876Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Arduino实战全攻略，15个创客喜爱的Arduino实例制作项目 <a href="https://blog.csdn.net/monkey2018/article/details/81004206" target="_blank" rel="noopener">https://blog.csdn.net/monkey2018/article/details/81004206</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>计算机组成原理学习题目</title>
     <link href="http://yoursite.com/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E9%A2%98%E7%9B%AE/"/>
     <id>http://yoursite.com/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E9%A2%98%E7%9B%AE/</id>
@@ -149,6 +171,50 @@
   </entry>
   
   <entry>
+    <title>hadoop</title>
+    <link href="http://yoursite.com/2020/03/05/hadoop/"/>
+    <id>http://yoursite.com/2020/03/05/hadoop/</id>
+    <published>2020-03-05T08:31:07.000Z</published>
+    <updated>2020-03-17T09:02:05.904Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>哔哔哩哩hadoop学习 <a href="https://www.bilibili.com/video/av32081351?from=search&amp;seid=18418052343509611764" target="_blank" rel="noopener">https://www.bilibili.com/video/av32081351?from=search&amp;seid=18418052343509611764</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能</title>
+    <link href="http://yoursite.com/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    <id>http://yoursite.com/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</id>
+    <published>2020-02-26T08:31:07.000Z</published>
+    <updated>2020-03-17T09:21:29.481Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度AL学习 <a href="https://aistudio.baidu.com/aistudio/projectoverview" target="_blank" rel="noopener">https://aistudio.baidu.com/aistudio/projectoverview</a><br>神经网络BP反向传播算法原理和详细推导流程  <a href="https://blog.csdn.net/qq_32865355/article/details/80260212" target="_blank" rel="noopener">https://blog.csdn.net/qq_32865355/article/details/80260212</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>notebook报错 ImportError_ No module named ___</title>
     <link href="http://yoursite.com/2020/02/16/notebook%E6%8A%A5%E9%94%99%20ImportError_%20No%20module%20named%20___/"/>
     <id>http://yoursite.com/2020/02/16/notebook%E6%8A%A5%E9%94%99%20ImportError_%20No%20module%20named%20___/</id>
@@ -193,6 +259,94 @@
   </entry>
   
   <entry>
+    <title>火影系列</title>
+    <link href="http://yoursite.com/2020/01/15/%E7%81%AB%E5%BD%B1/"/>
+    <id>http://yoursite.com/2020/01/15/%E7%81%AB%E5%BD%B1/</id>
+    <published>2020-01-15T08:31:07.000Z</published>
+    <updated>2020-03-17T09:06:07.893Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>火影忍者迅雷全链接 emmm暂时找不到了~</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>线性代数</title>
+    <link href="http://yoursite.com/2020/01/05/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    <id>http://yoursite.com/2020/01/05/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</id>
+    <published>2020-01-05T08:31:07.000Z</published>
+    <updated>2020-03-17T09:02:47.792Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>线性代数期末复习 <a href="https://www.sohu.com/a/280972453_600110" target="_blank" rel="noopener">https://www.sohu.com/a/280972453_600110</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android</title>
+    <link href="http://yoursite.com/2019/11/12/Andriod/"/>
+    <id>http://yoursite.com/2019/11/12/Andriod/</id>
+    <published>2019-11-12T08:31:07.000Z</published>
+    <updated>2020-03-17T09:03:54.134Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安卓编程学习 <a href="https://blog.csdn.net/m0_37868230/article/details/80748298" target="_blank" rel="noopener">https://blog.csdn.net/m0_37868230/article/details/80748298</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java</title>
+    <link href="http://yoursite.com/2019/10/16/java/"/>
+    <id>http://yoursite.com/2019/10/16/java/</id>
+    <published>2019-10-16T08:31:07.000Z</published>
+    <updated>2020-03-17T09:06:49.207Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>myeclipse 2015 CI key 破解教程 亲测可用 <a href="https://blog.csdn.net/qq_35324453/article/details/80882031" target="_blank" rel="noopener">https://blog.csdn.net/qq_35324453/article/details/80882031</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>c++总结</title>
     <link href="http://yoursite.com/2019/09/17/c++%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2019/09/17/c++%E6%80%BB%E7%BB%93/</id>
@@ -200,6 +354,50 @@
     <updated>2020-03-15T12:26:51.051Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>const在不同位置时的不同意义指针类型前：</p><p>声明一个指向常量的指针，程序中不能通过指针来改变它所指向的值，但指针本身的值可以改变，即指针可以指向其他数据；</p><p>“*”号和指针名之间，声明一个指针常量(常指针)，指针本身的值不可改变，即不能指向其他数据，但指向的数据的值可以改变<br>两个地方都加，声明指向常量的指针常量，指针本身的值不可改变，指向的数据也不能通过指针改变</p><p>函数指针使用函数指针之前，必须先赋值，使它指向一个函数入口地址，赋值语法格式为：函数指针名 = 函数名，其中函数名代表的函数必须是一个已经定义过的，和函数指针具有相同返回类型的函数，</p><p>指针调用函数格式：(*指针变量)(实参列表)<br>访问权限public：可被任意实体访问<br>protected：只允许本类及子类的成员函数访问<br>private：只允许本类的成员函数访问</p><p>构造函数创建对象时，自动调用构造函数，不能在程序中直接调用，可有任意类型参数，但不能有返回类型；<br>构造函数作用：为对象分配空间、为数据成员赋初值、请求其他资源<br>构造函数工作：初始化虚函数表、建立基类对象、建立非静态数据成员对象、安置虚基类对象信息、执行构造函数体中的代码</p><p>若一个类中没有定义构造函数，编译器会自动生成不带参数的默认构造函数，格式为：&lt;类名&gt;::&lt;默认构造函数名&gt;(){}析构函数析构函数作用：清除对象、释放内存<br>析构函数工作：执行析构函数中的代码、将对象占据的存储空间归还系统、做公共及用户要求的善后工作<br>析构函数无参数和返回值，一个类中只能定义一个析构函数，故不能重载，格式为：~&lt;类名&gt;();内存布局全局数据区：存放全局变量、静态数据、常量<br>代码区：存放类成员函数、其他函数代码<br>栈区：存放局部变量、函数参数、返回数据、返回地址<br>堆区：自由存储区<br>运算符重载重载形式重载为类的成员函数，参数个数比原来的运算数少一个&lt;函数类型&gt; operator &lt;运算符&gt; (&lt;形参列表&gt;){&lt;函数体&gt;;}重载为类的友元函数，参数个数与原运算数个数一样多<br>friend &lt;函数类型&gt; operator &lt;运算符&gt; (&lt;形参列表&gt;){&lt;函数体&gt;;}函数重载：返回值类型可以相同可以不同，但形参列表一定不同</p><p>静态数据成员初始化格式：&lt;类型&gt;&lt;类名&gt;::&lt;静态数据成员&gt;=&lt;值&gt;<br>引用格式：&lt;类名&gt;::&lt;静态数据成员&gt;;<br>继承方式私有继承private：父类的公有成员和保护成员作为子类的的私有成员，且不能被子类的派生类访问<br>公有继承public：父类的公有成员和保护成员作为子类的成员时，仍保持原有状态，父类私有成员仍为私有<br>保护继承protected：父类的公有成员和保护成员成为子类的保护成员，且只能被他的派生类成员函数或友元访问，父类私有成员仍为私有</p><p> 派生类构造函数调用顺序：调用基类的构造函数，调用顺序按继承时说明的顺序<br> 调用子对象类的构造函数，调用顺序按在类中说明的顺序<br> 派生类构造函数体中内容<br> 函数模版template &lt; 模板形参表 &gt;template <typename T>返回值类型 函数名（形式参数列表）{    函数体语句}例：template <typename T>void swap( T&amp; v1, T&amp; v2){    T temp;    temp = v1;    v1 = v2;    v2 = temp;}虚函数虚函数必须是类的成员函数，不能是友元，但可以是另一个类的友元，不能为全局函数，也不能为静态函数，析构函数可以为虚函数，但构造函数不能为虚函数</p><p> 变量初始化局部变量：定义时，系统不会进行初始化<br> 全局变量：定义时，系统自动初始化，   友元函数在类中定义过，但不是成员函数，定义在类外部，但有权访问类中成员<br> this指针只有成员函数才有this指针，友元函数没有this指针<br> 静态成员函数与普通成员函数区别：静态成员函数没有this指针，只能访问静态成员（包括静态成员变量和静态成员函数）<br> 普通成员函数有this指针，可以访问类中任意成员，而静态成员函数无this指针</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mysql</title>
+    <link href="http://yoursite.com/2019/09/11/mysql/"/>
+    <id>http://yoursite.com/2019/09/11/mysql/</id>
+    <published>2019-09-11T08:31:07.000Z</published>
+    <updated>2020-03-17T09:10:42.682Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>MySQL菜鸟教程学习 <a href="https://www.runoob.com/mysql/mysql-install.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-install.html</a><br>MYSQL的安装 <a href="https://blog.csdn.net/fpga_zy/article/details/80689265" target="_blank" rel="noopener">https://blog.csdn.net/fpga_zy/article/details/80689265</a><br>C#的自动拼接Sql语句Insert方法及思路  <a href="https://www.cnblogs.com/chenyanbin/p/10201465.html" target="_blank" rel="noopener">https://www.cnblogs.com/chenyanbin/p/10201465.html</a><br>用navicat连接数据库报错：1130-host … is not allowed to connect to this MySql server如何处理 <a href="https://blog.csdn.net/dabao87/article/details/80571877" target="_blank" rel="noopener">https://blog.csdn.net/dabao87/article/details/80571877</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>qt</title>
+    <link href="http://yoursite.com/2019/09/10/qt/"/>
+    <id>http://yoursite.com/2019/09/10/qt/</id>
+    <published>2019-09-10T08:31:07.000Z</published>
+    <updated>2020-03-17T09:13:47.166Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>QT 之TCP网络编程（非常值得看的一篇博客！） <a href="https://blog.csdn.net/u014252478/article/details/80377103" target="_blank" rel="noopener">https://blog.csdn.net/u014252478/article/details/80377103</a><br>Qt5 TcpSocket 客户端/服务器 通讯实例 <a href="https://blog.csdn.net/u012997311/article/details/50996701" target="_blank" rel="noopener">https://blog.csdn.net/u012997311/article/details/50996701</a><br>Qt5.9以上 for Android开发环境搭建 <a href="https://blog.csdn.net/qq_32250025/article/details/79106662" target="_blank" rel="noopener">https://blog.csdn.net/qq_32250025/article/details/79106662</a><br>Tools_1_1_3_Windows Qt5.10 for Android移植 <a href="https://blog.csdn.net/yongheng0852/article/details/78875855" target="_blank" rel="noopener">https://blog.csdn.net/yongheng0852/article/details/78875855</a><br>QT5的程序打包发布（将QT5的工程项目打包成一个exe程序） <a href="https://blog.csdn.net/windsnow1/article/details/78004265" target="_blank" rel="noopener">https://blog.csdn.net/windsnow1/article/details/78004265</a><br>解决This application failed to start because it could not find or load the Qt platform plugin “windows <a href="https://blog.csdn.net/perfect_accepted/article/details/80140362" target="_blank" rel="noopener">https://blog.csdn.net/perfect_accepted/article/details/80140362</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
@@ -246,138 +444,6 @@
     <updated>2020-03-15T12:31:19.502Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)<br>E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?</p><p>解决：<br>1.<br>ps -A | grep apt<br>杀死进程PID<br>2.<br>sudo rm /var/cache/apt/archives/lock<br>sudo rm /var/lib/dpkg/lock</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>c++学习2</title>
-    <link href="http://yoursite.com/2019/07/10/c++%E5%AD%A6%E4%B9%A02/"/>
-    <id>http://yoursite.com/2019/07/10/c++%E5%AD%A6%E4%B9%A02/</id>
-    <published>2019-07-10T12:29:29.000Z</published>
-    <updated>2020-03-15T12:26:21.504Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>函数重载：在同一个作用域内，可以声明几个功能类似的同名函数，但是这些同名函数的形式参数（指参数的个数、类型或者顺序）必须不同。您不能仅通过返回类型的不同来重载函数注意：重载函数的参数个数，参数类型或参数顺序三者中必须有一个不同 函数重载的规则： 函数名称必须相同。参数列表必须不同（个数不同、类型不同、参数排列顺序不同等）。函数的返回类型可以相同也可以不相同。仅仅返回类型不同不足以成为函数的重载。  指针：<del>~ 对象的基础–结构：   使用对象编程：class Car{public:    std::string color;    std::string engine;    float gaa_tank;    void fill_tank(float liter);    void running(void);    Car(void);     //构造器};  void Car::fill_tank(float liter){    gas_tank +=liter;} Car::Car(void){    color = “while”;    engine = “v8”;    wheel = 4;    gas_tank = FULL_GAS;}   int main (){    return 0;}    构造器：1.与类名相同，无返回，被系统生成对象时自动调用，用于初始化 2.可以有参数，构造器的重载，默认参数 3.若未提供任何构造，系统默认生成一个无参空构造器。若提供，则不再生成默认构造器。析构器：1.函数名：类名前加上</del>2.没有返回值3.没有参数，不可以被重载4.必须公有5.没有析构函数，默认析构函数 6.一个类中只能拥有一个析构函数   #include <iostream>#include<string> class Baseclass//定义一个类{public:    Baseclass();///构造器    <del>Baseclass();//析构器    void dosometing();//方法}; class Subclass : public Baseclass//定义子类{public:    Subclass();    ~Subclass();}; //对基类构造器进行定义Baseclass::Baseclass(){    std::cout&lt;&lt;”进入基类构造器……\n\n”;    std::cout&lt;&lt;”我在基类构造器干某事……\n\n”;} //对基类析构器进行定义Baseclass::</del>Baseclass(){    std::cout&lt;&lt;”进入基类析构器……\n\n”;    std::cout&lt;&lt;”我在基类析构器干某事……\n\n”;}//对类的方法进行编写void Baseclass::dosometing(){    std::cout&lt;&lt;”dosometing函数的调用\n\n”;} //对子类构造器进行定义Subclass::Subclass(){    std::cout&lt;&lt;”进入子类构造器。。\n\n”;    std::cout&lt;&lt;”我在子类构造器干某事……\n\n”;}//对子类析构器进行定义Subclass::<del>Subclass(){    std::cout&lt;&lt;”进入子类析构器。。\n\n”;    std::cout&lt;&lt;”我在子类析构器干某事……\n\n”;} int main(){    Subclass  duixiang;//定义一个对象     duixiang.dosometing();    std::cout&lt;&lt;”完事，收工！\n\n”;    return 0;     this指针：一个对象的this指针并不是对象本身的一部分，不会影响sizeof（对象）的结果。this作用域是在类内部，当在类的非静态成员函数中访问类的非静态成员的时候，编译器会自动将对象本身的地址作为一个隐含参数传递给函数。  类的继承：class SubClass : pubcil SuperClass{    }class Pig(子类) : public Animal（父类）{}； 例如：class Animal{public:    std::string mouth;        void eat();    void sleep();    void drool();    }; class Pig : public Animal{public:    void climb();    }; class Turtle : public Animal{public:    void swim();}; void Animal::sleep(){    std::cout&lt;&lt; “i am sleepingf”&lt;&lt;std :: endl;} void Pig::climb(){    std::cout &lt;&lt; “hhhh会上树”&lt;&lt;std ::endl;} int main(){    Pig pig;    Turtle tyrtle;     pig.sleep();    turtle.sleep();    pig.climb();    turtle.swim();     return 0;}   继承机制中的构造器和析构器：#include <iostream>#include<string> class Baseclass//定义一个类{public:    Baseclass();///构造器    ~Baseclass();//析构器    void dosometing();//方法}; class Subclass : public Baseclass//定义子类{public:    Subclass();    ~Subclass();}; //对基类构造器进行定义Baseclass::Baseclass(){    std::cout&lt;&lt;”进入基类构造器……\n\n”;    std::cout&lt;&lt;”我在基类构造器干某事……\n\n”;} //对基类析构器进行定义Baseclass::</del>Baseclass(){    std::cout&lt;&lt;”进入基类析构器……\n\n”;    std::cout&lt;&lt;”我在基类析构器干某事……\n\n”;}//对类的方法进行编写void Baseclass::dosometing(){    std::cout&lt;&lt;”dosometing函数的调用\n\n”;} //对子类构造器进行定义Subclass::Subclass(){    std::cout&lt;&lt;”进入子类构造器。。\n\n”;    std::cout&lt;&lt;”我在子类构造器干某事……\n\n”;}//对子类析构器进行定义Subclass::~Subclass(){    std::cout&lt;&lt;”进入子类析构器。。\n\n”;    std::cout&lt;&lt;”我在子类析构器干某事……\n\n”;} int main(){    Subclass  duixiang;//定义一个对象     duixiang.dosometing();    std::cout&lt;&lt;”完事，收工！\n\n”;    return 0;     </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>关于SSH连不上linux</title>
-    <link href="http://yoursite.com/2019/07/10/%E5%85%B3%E4%BA%8ESSH%E8%BF%9E%E4%B8%8D%E4%B8%8Alinux/"/>
-    <id>http://yoursite.com/2019/07/10/%E5%85%B3%E4%BA%8ESSH%E8%BF%9E%E4%B8%8D%E4%B8%8Alinux/</id>
-    <published>2019-07-10T08:06:42.000Z</published>
-    <updated>2020-03-15T12:31:27.699Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1.打开虚拟机终端，输入sudo apt-get install openssh-server<br>键入密码（装虚拟机时设的密码）<br>2.打开mobaxterm，点击session图标，点击ssh图标，返回虚拟机输入ifconfig<br>查询ip地址（inet addr 后面的192.168.。。。。）<br>将IP地址输入mobaxterm对应的remote host.<br>specify username输入虚拟机名字。<br>点击ok，连接成功。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>c++笔记</title>
-    <link href="http://yoursite.com/2019/07/10/c++%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2019/07/10/c++%E7%AC%94%E8%AE%B0/</id>
-    <published>2019-07-10T06:48:29.000Z</published>
-    <updated>2020-03-15T12:22:42.210Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol><li><p>ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.getline<br>//读入一行 cin.peekcin.readcin.write const int SIZE（静态变量） =<br>50//#difine…. argc       //参数数量argv[]      //参数EOF   —-   (-1)<br>或ifstream in(file,打开方式);     //FILE in； in.open    //打开文件 打开方式：</p><ol><li>List item</li></ol><p>ios::in     //可读ios::out<del>binary</del>app<del>trunk·</del>nocreate<del>noreplece<br>例：fstream fp(“test.txt”,ios::in|ios::out)   以可读可写打开test.txt文件<br>ofstream  out；out.open<br>函数重载：在同一个作用域内，可以声明几个功能类似的同名函数，但是这些同名函数的形式参数（指参数的个数、类型或者顺序）必须不同。您不能仅通过返回类型的不同来重载函数注意：重载函数的参数个数，参数类型或参数顺序三者中必须有一个不同<br>函数重载的规则：<br>函数名称必须相同。参数列表必须不同（个数不同、类型不同、参数排列顺序不同等）。函数的返回类型可以相同也可以不相同。仅仅返回类型不同不足以成为函数的重载。<br>指针：</del> 对象的基础–结构：</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>sprintf应用</title>
-    <link href="http://yoursite.com/2019/07/08/sprintf%E7%9A%84%E5%BA%94%E7%94%A8/"/>
-    <id>http://yoursite.com/2019/07/08/sprintf%E7%9A%84%E5%BA%94%E7%94%A8/</id>
-    <published>2019-07-08T07:38:37.000Z</published>
-    <updated>2020-03-15T12:28:22.243Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>sprintf(“a,b,c”);<br>a要转换成的字符串<br>b–”%d”<br>c要转换的数字</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Paho -物联网 MQTT C Cient的实现和详解</title>
-    <link href="http://yoursite.com/2018/12/07/Paho%20-%E7%89%A9%E8%81%94%E7%BD%91%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%92%8C%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://yoursite.com/2018/12/07/Paho%20-%E7%89%A9%E8%81%94%E7%BD%91%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%92%8C%E8%AF%A6%E8%A7%A3/</id>
-    <published>2018-12-07T08:31:07.000Z</published>
-    <updated>2020-03-16T05:16:09.446Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>参考链接：<a href="https://www.cnblogs.com/homejim/p/8196763.html" target="_blank" rel="noopener">https://www.cnblogs.com/homejim/p/8196763.html</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Paho - MQTT C Cient的实现</title>
-    <link href="http://yoursite.com/2018/12/06/Paho%20-%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://yoursite.com/2018/12/06/Paho%20-%20MQTT%20C%20Cient%E7%9A%84%E5%AE%9E%E7%8E%B0/</id>
-    <published>2018-12-06T08:31:07.000Z</published>
-    <updated>2020-03-16T05:14:48.888Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>参考链接：<a href="https://blog.csdn.net/weixin_37139197/article/details/78934961" target="_blank" rel="noopener">https://blog.csdn.net/weixin_37139197/article/details/78934961</a></p>]]></content>
     
     <summary type="html">
     
