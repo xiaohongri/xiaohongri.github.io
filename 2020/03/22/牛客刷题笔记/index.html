@@ -557,21 +557,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-22
+                    2020-03-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    307
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 				
@@ -592,6 +592,55 @@
 <p>4元集到3元集满射个数为<br>FantDing_nk<br>先讲4个元素分成3组，再将三组映射到另3个元素: C(4,2)*A(3,3)=36</p>
 <p>算法题：<br>在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。<br>解答：<br>链接：<a href="https://www.nowcoder.com/questionTerminal/abc3fe2ce8e146608e868a70efebf62e?orderByHotValue=1&amp;page=1&amp;onlyReference=false" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/abc3fe2ce8e146608e868a70efebf62e?orderByHotValue=1&amp;page=1&amp;onlyReference=false</a><br>来源：牛客网</p>
 <p>class Solution {<br>public:<br>    bool Find(vector&lt;vector<int> &gt; array,int target) {<br>        int rowCount = array.size();<br>        int colCount = array[0].size();<br>        int i,j;<br>        for(i=rowCount-1,j=0;i&gt;=0&amp;&amp;j&lt;colCount;)<br>        {<br>            if(target == array[i][j])<br>                return true;<br>            if(target &lt; array[i][j])<br>            {<br>                i–;<br>                continue;<br>            }<br>            if(target &gt; array[i][j])<br>            {<br>                j++;<br>                continue;<br>            }<br>        }<br>        return false;<br>    }<br>};</int></p>
+<p>3.23：<br>int func(x)<br>{<br>    int countx = 0;<br>    while(x)<br>    {<br>          countx ++;<br>          x = x&amp;(x-1);<br>     }<br>    return countx;<br>}<br>功能：将x转化为2进制，看含有的1的个数。<br>注: 每执行一次x = x&amp;(x-1)，会将x用二进制表示时最右边的一个1变为0，因为x-1将会将该位(x用二进制表示时最右边的一个1)变为0。<br>这是“位运算”中的一种很经典的用法，“&amp;”是“位于”的意思。它具体点的意思就是把x的二进制表示数最右边的一个1变成0  例如：<br>  e1:<br>  x      = 01001000<br>  x-1    = 01000111<br>  x&amp;(x-1)= 01000000</p>
+<p>文件的顺序结构是一种最简单的物理结构，只要知道文件在存储设备上的起始地址(首块号)和文件长度(总块数)就能很快地进行存取。</p>
+<p>坑点应该是加了客户端安全。似乎除了TRACE其他方法都可能会涉及到发送或请求信息和资源，所以被列为不安全。而TRACE方法只是记录路径信息，不会引起不安全行为<br>1    GET    请求指定的页面信息，并返回实体主体。<br>2    HEAD    类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头<br>3    POST    向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。<br>4    PUT    从客户端向服务器传送的数据取代指定的文档的内容。<br>5    DELETE    请求服务器删除指定的页面。<br>6    CONNECT    HTTP/1.1协议中预留给能够将连接改为管道方式的***服务器。<br>7    OPTIONS    允许客户端查看服务器的性能。<br>8    TRACE    回显服务器收到的请求，主要用于测试或诊断。</p>
+<p>两个大数相加：<br>public static void main(String[] args) {<br>    String str1 = “123459”;<br>    String str2 = “123”;<br>    System.out.println(add(str1, str2));//123582<br>}</p>
+<p>private static String add(String str1, String str2) {<br>    //任何一个字符串为null或空字符串，都不需要相加了<br>    if (str1 == null || “”.equals(str1)) {<br>        return str2;<br>    }<br>    if (str2 == null || “”.equals(str2)) {<br>        return str1;<br>    }<br>    int maxLength = Math.max(str1.length(), str2.length());<br>    //定义一个存贮结果的字符串，长度要比最大长度字符串还长一位，用于存储可能出现的进位<br>    StringBuffer result = new StringBuffer(maxLength + 1);</p>
+<pre><code>//翻转两个字符串
+str1 = new StringBuffer(str1).reverse().toString();
+str2 = new StringBuffer(str2).reverse().toString();
+
+//反转后的结果分别为：
+//954321
+//321
+int minLength = Math.min(str1.length(), str2.length());
+//进位
+int carry = 0;
+//当前位上的数值
+int currentNum = 0;
+//循环变量
+int i = 0;
+for (; i &lt; minLength; i++) {
+    //分别获取两个字符对应的字面数值，然后相加，再加上进位
+    currentNum = str1.charAt(i) + str2.charAt(i) - 2 * '0' + carry;
+    //获取进位
+    carry = currentNum / 10;
+    //处理当前位的最终值
+    currentNum %= 10;
+    //保存当前位的值到最终的字符缓冲区中
+    result.append(String.valueOf(currentNum));
+}
+if (str1.length() &lt; str2.length()) {
+    //选择
+    str1 = str2;
+}
+for (; i &lt; str1.length(); i++) {
+    //分别获取两个字符对应的字面数值，然后相加，再加上进位
+    currentNum = str1.charAt(i) - '0' + carry;
+    //获取进位
+    carry = currentNum / 10;
+    //处理当前位的最终值
+    currentNum %= 10;
+    //保存当前位的值到最终的字符缓冲区中
+    result.append(String.valueOf(currentNum));
+}
+//处理最后一个的进位(当循环结束后，是不是还可能会有一个进位)
+if (carry &gt; 0) {
+    result.append(String.valueOf(carry));
+}
+//最后翻转恢复字符串，再返回
+return result.reverse().toString();</code></pre><p>}</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1313,7 +1362,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.7k</span>&nbsp;字
+                class="white-color">6.7k</span>&nbsp;字
             
             
             
