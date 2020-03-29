@@ -557,21 +557,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-27
+                    2020-03-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    17 分
                 </div>
                 
 				
@@ -680,6 +680,22 @@ return result.reverse().toString();</code></pre><p>}</p>
 <p>解释：1：不正确。windows线程创建时，不会绑定在特定的CPU上，需要手动绑定，或者调用 SetThreadAffinityMask接口进行绑定；<br>           2：正确。参考  <a href="http://blog.csdn.net/beyond_cn/article/details/15813361" target="_blank" rel="noopener">http://blog.csdn.net/beyond_cn/article/details/15813361</a><br>           3：不正确。参考2的链接。欢迎各位纠正。<br>           4：正确。参考msdn:<br>            _beginthread 函数可创建在 start_address 开始执行例程的线程。  start_address 中的例程必须使用  __cdecl （用于本机代码）或  __clrcall （用于托管代码）调用约定，并且应没有返回值。<br>            传递给  _beginthreadex   的   start_address   中的例程必须使用   __stdcall （用于本机代码）或   __clrcall （用于托管代码）调用约定，并且必须返回线程退出代码。<br>            所以，通过1，就能选出D。</p>
 <p>下列哪一个选项是引入缓冲的原因（）。<br>正确答案: A B D   你的答案: A (错误)<br>缓冲CPU和I/O设备间速度不匹配的矛盾<br>减少对CPU的中断频率，放宽对蓄洪大响应时间的限制<br>减少CPU对I/O控制的干预<br>提高CPU和I/O设备之间的并行性</p>
 <p>引入缓冲的主要目的：<br>1．缓和处理机和I/O设备间速度不匹配的矛盾<br>2．减少对CPU的中断次数<br>3．提高CPU和I/O设备之间的并行性</p>
+<p>3.29：<br>下列代码运行结果是？<br>a = map(lambda x: x**3, [1, 2, 3])<br>list(a)</p>
+<p>正确答案: C   你的答案: C (正确)<br>[1, 6, 9]<br>[1, 12, 27]<br>[1, 8, 27]<br>(1, 6, 9)</p>
+<p>map() 会根据提供的函数对指定序列做映射。</p>
+<p>第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。</p>
+<p>语法<br>map() 函数语法：</p>
+<p>1<br>map(function, iterable, …)<br>参数<br>function – 函数<br>iterable – 一个或多个序列<br>返回值<br>Python 2.x 返回列表。</p>
+<p>Python 3.x 返回迭代器。</p>
+<p>以下程序输出为：<br>def test(a,b,*args):<br>print(a)<br>print(b)<br>print(args)<br>test(11,22,33,44,55,66,77,88,99)<br>正确答案: A   你的答案: B (错误)<br>11 22 (33, 44, 55, 66, 77, 88, 99)<br>编译错误<br>运行错误<br>11 22 (11,22，33, 44, 55, 66, 77, 88, 99)</p>
+<p>def test(a,b,<em>args)<br>a,b位置参数；</em>args为不定长位置参数，传入的参数被放入一个元祖里。<br>所以，a,b分别被赋值11、22，而其他的数被存到一个元组里。</p>
+<p>下列Python语句正确的是<br>正确答案: D   你的答案: B (错误)<br>min = x  if  x &lt; y   = y<br>max = x &gt; y ? x : y<br>if (x &gt; y)        print x<br>while True : pass</p>
+<p>本题主要考察 Python 基本语法与运算符的使用，下面逐个分析每个选项：</p>
+<p>A、三元运算符的使用。基本语法为：</p>
+<p>1<br>a if condition else b<br>上述语句当 condition 为真时等于 a，为假时等于 b。因此 A 选项改为下列语句则正确：</p>
+<p>1<br>min = x if x&lt;y else y<br>B、还是三元运算符的使用，只不过 B 选项的用法在 C、Java 等语言中成立，在 Python 中没有此用法，正确用法参见选项 A。</p>
+<p>C、if 语句缺少冒号，并且正确用法如下：</p>
+<p>1<br>if (x&gt;y): print x<br>D、while 语句与 pass 语句的使用。pass语句为空语句，意义只是为了保持程序结构的完整性。该选项写法正确，故选 D。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1401,7 +1417,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.9k</span>&nbsp;字
+                class="white-color">10.4k</span>&nbsp;字
             
             
             
