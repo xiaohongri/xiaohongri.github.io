@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-28T06:41:01.231Z</updated>
+  <updated>2020-03-30T14:20:00.257Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>poj刷题</title>
+    <link href="http://yoursite.com/2020/03/30/poj%E5%88%B7%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/03/30/poj%E5%88%B7%E9%A2%98/</id>
+    <published>2020-03-30T08:31:07.000Z</published>
+    <updated>2020-03-30T14:20:00.257Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>2479：<br>Maximum sum<br>Time Limit: 1000MS        Memory Limit: 65536K<br>Total Submissions: 46793        Accepted: 14439<br>Description</p><p>Given a set of n integers: A={a1, a2,…, an}, we define a function d(A) as below:</p><p>Your task is to calculate d(A).<br>Input</p><p>The input consists of T(&lt;=30) test cases. The number of test cases (T) is given in the first line of the input.<br>Each test case contains two lines. The first line is an integer n(2&lt;=n&lt;=50000). The second line contains n integers: a1, a2, …, an. (|ai| &lt;= 10000).There is an empty line after each case.<br>Output</p><p>Print exactly one line for each test case. The line should contain the integer d(A).<br>Sample Input</p><p>1</p><p>10<br>1 -1 2 2 3 -3 4 -4 5 -5<br>Sample Output</p><p>13<br>Hint</p><p>In the sample, we choose {2,2,3,-3,4} and {5}, then we can get the answer. </p><p>Huge input,scanf is recommended.</p><p>解：<br>#include<cstdio><br>#include<cstring><br>#include<algorithm><br>using namespace std;<br>#define maxn 50010<br>int a[maxn],left[maxn],right[maxn];<br>int main()<br>{<br>    int t,n,i;<br>    scanf(“%d”,&amp;t);<br>    while(t–)<br>    {<br>        scanf(“%d”,&amp;n);<br>        for(i=0;i&lt;n;++i)<br>            scanf(“%d”,&amp;a[i]);<br>        left[0]=a[0];<br>        for(i=1;i&lt;n;++i)//此时left[i]为包含i的最大字段和<br>        {<br>            if(left[i-1]&lt;0)<br>                left[i]=a[i];<br>            else<br>                left[i]=left[i-1]+a[i];<br>        }<br>        for(i=1;i&lt;n;++i)//此时left[i]为i左边（包含i这个点）的最大字段和<br>            left[i]=max(left[i],left[i-1]);<br>        right[n-1]=a[n-1];<br>        for(i=n-2;i&gt;=0;–i)<br>        {<br>            if(right[i+1]&lt;0)<br>                right[i]=a[i];<br>            else<br>                right[i]=right[i+1]+a[i];<br>        }<br>        for(i=n-2;i&gt;=0;–i)<br>            right[i]=max(right[i],right[i+1]);<br>        int ans=-10000*maxn;<br>        for(i=1;i&lt;n;++i)<br>            ans=max(ans,left[i-1]+right[i]);<br>        printf(“%d\n”,ans);<br>    }<br>    return 0;<br>} </algorithm></cstring></cstdio></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>名言警句</title>
@@ -65,9 +87,9 @@
     <link href="http://yoursite.com/2020/03/23/%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2020/03/23/%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0/</id>
     <published>2020-03-23T08:31:07.000Z</published>
-    <updated>2020-03-23T01:22:09.659Z</updated>
+    <updated>2020-03-30T00:10:48.499Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>毛概大题答出著作有加分</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>毛概大题答出著作有加分<br>1、中国共产党为什么是历史的选择，人民的选择。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
@@ -420,28 +442,6 @@
     <updated>2020-03-17T09:06:49.207Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>myeclipse 2015 CI key 破解教程 亲测可用 <a href="https://blog.csdn.net/qq_35324453/article/details/80882031" target="_blank" rel="noopener">https://blog.csdn.net/qq_35324453/article/details/80882031</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>c++总结</title>
-    <link href="http://yoursite.com/2019/09/17/c++%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2019/09/17/c++%E6%80%BB%E7%BB%93/</id>
-    <published>2019-09-17T08:31:07.000Z</published>
-    <updated>2020-03-15T12:26:51.051Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>const在不同位置时的不同意义指针类型前：</p><p>声明一个指向常量的指针，程序中不能通过指针来改变它所指向的值，但指针本身的值可以改变，即指针可以指向其他数据；</p><p>“*”号和指针名之间，声明一个指针常量(常指针)，指针本身的值不可改变，即不能指向其他数据，但指向的数据的值可以改变<br>两个地方都加，声明指向常量的指针常量，指针本身的值不可改变，指向的数据也不能通过指针改变</p><p>函数指针使用函数指针之前，必须先赋值，使它指向一个函数入口地址，赋值语法格式为：函数指针名 = 函数名，其中函数名代表的函数必须是一个已经定义过的，和函数指针具有相同返回类型的函数，</p><p>指针调用函数格式：(*指针变量)(实参列表)<br>访问权限public：可被任意实体访问<br>protected：只允许本类及子类的成员函数访问<br>private：只允许本类的成员函数访问</p><p>构造函数创建对象时，自动调用构造函数，不能在程序中直接调用，可有任意类型参数，但不能有返回类型；<br>构造函数作用：为对象分配空间、为数据成员赋初值、请求其他资源<br>构造函数工作：初始化虚函数表、建立基类对象、建立非静态数据成员对象、安置虚基类对象信息、执行构造函数体中的代码</p><p>若一个类中没有定义构造函数，编译器会自动生成不带参数的默认构造函数，格式为：&lt;类名&gt;::&lt;默认构造函数名&gt;(){}析构函数析构函数作用：清除对象、释放内存<br>析构函数工作：执行析构函数中的代码、将对象占据的存储空间归还系统、做公共及用户要求的善后工作<br>析构函数无参数和返回值，一个类中只能定义一个析构函数，故不能重载，格式为：~&lt;类名&gt;();内存布局全局数据区：存放全局变量、静态数据、常量<br>代码区：存放类成员函数、其他函数代码<br>栈区：存放局部变量、函数参数、返回数据、返回地址<br>堆区：自由存储区<br>运算符重载重载形式重载为类的成员函数，参数个数比原来的运算数少一个&lt;函数类型&gt; operator &lt;运算符&gt; (&lt;形参列表&gt;){&lt;函数体&gt;;}重载为类的友元函数，参数个数与原运算数个数一样多<br>friend &lt;函数类型&gt; operator &lt;运算符&gt; (&lt;形参列表&gt;){&lt;函数体&gt;;}函数重载：返回值类型可以相同可以不同，但形参列表一定不同</p><p>静态数据成员初始化格式：&lt;类型&gt;&lt;类名&gt;::&lt;静态数据成员&gt;=&lt;值&gt;<br>引用格式：&lt;类名&gt;::&lt;静态数据成员&gt;;<br>继承方式私有继承private：父类的公有成员和保护成员作为子类的的私有成员，且不能被子类的派生类访问<br>公有继承public：父类的公有成员和保护成员作为子类的成员时，仍保持原有状态，父类私有成员仍为私有<br>保护继承protected：父类的公有成员和保护成员成为子类的保护成员，且只能被他的派生类成员函数或友元访问，父类私有成员仍为私有</p><p> 派生类构造函数调用顺序：调用基类的构造函数，调用顺序按继承时说明的顺序<br> 调用子对象类的构造函数，调用顺序按在类中说明的顺序<br> 派生类构造函数体中内容<br> 函数模版template &lt; 模板形参表 &gt;template <typename T>返回值类型 函数名（形式参数列表）{    函数体语句}例：template <typename T>void swap( T&amp; v1, T&amp; v2){    T temp;    temp = v1;    v1 = v2;    v2 = temp;}虚函数虚函数必须是类的成员函数，不能是友元，但可以是另一个类的友元，不能为全局函数，也不能为静态函数，析构函数可以为虚函数，但构造函数不能为虚函数</p><p> 变量初始化局部变量：定义时，系统不会进行初始化<br> 全局变量：定义时，系统自动初始化，   友元函数在类中定义过，但不是成员函数，定义在类外部，但有权访问类中成员<br> this指针只有成员函数才有this指针，友元函数没有this指针<br> 静态成员函数与普通成员函数区别：静态成员函数没有this指针，只能访问静态成员（包括静态成员变量和静态成员函数）<br> 普通成员函数有this指针，可以访问类中任意成员，而静态成员函数无this指针</p>]]></content>
     
     <summary type="html">
     

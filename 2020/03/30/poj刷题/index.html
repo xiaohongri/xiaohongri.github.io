@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于Ubuntu中Could not get lock _var_lib_dpkg_lock解决方案, 科学、学习、人情世故">
-    <meta name="description" content="E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)E: Unable to lock the administrati">
+    <meta name="keywords" content="poj刷题, 科学、学习、人情世故">
+    <meta name="description" content="2479：Maximum sumTime Limit: 1000MS        Memory Limit: 65536KTotal Submissions: 46793        Accepted: 14439Description">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>关于Ubuntu中Could not get lock _var_lib_dpkg_lock解决方案 | 魏尔肖的blog</title>
+    <title>poj刷题 | 魏尔肖的blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -414,12 +414,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于Ubuntu中Could not get lock _var_lib_dpkg_lock解决方案</h1>
+                    <h1 class="description center-align post-title">poj刷题</h1>
                 </div>
             </div>
         </div>
@@ -548,28 +548,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-19
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-15
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    401
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -585,9 +585,36 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)<br>E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?</p>
-<p>解决：<br>1.<br>ps -A | grep apt<br>杀死进程PID<br>2.<br>sudo rm /var/cache/apt/archives/lock<br>sudo rm /var/lib/dpkg/lock</p>
-
+                <p>2479：<br>Maximum sum<br>Time Limit: 1000MS        Memory Limit: 65536K<br>Total Submissions: 46793        Accepted: 14439<br>Description</p>
+<p>Given a set of n integers: A={a1, a2,…, an}, we define a function d(A) as below:</p>
+<p>Your task is to calculate d(A).<br>Input</p>
+<p>The input consists of T(&lt;=30) test cases. The number of test cases (T) is given in the first line of the input.<br>Each test case contains two lines. The first line is an integer n(2&lt;=n&lt;=50000). The second line contains n integers: a1, a2, …, an. (|ai| &lt;= 10000).There is an empty line after each case.<br>Output</p>
+<p>Print exactly one line for each test case. The line should contain the integer d(A).<br>Sample Input</p>
+<p>1</p>
+<p>10<br>1 -1 2 2 3 -3 4 -4 5 -5<br>Sample Output</p>
+<p>13<br>Hint</p>
+<p>In the sample, we choose {2,2,3,-3,4} and {5}, then we can get the answer. </p>
+<p>Huge input,scanf is recommended.</p>
+<p>解：<br>#include<cstdio><br>#include<cstring><br>#include<algorithm><br>using namespace std;<br>#define maxn 50010<br>int a[maxn],left[maxn],right[maxn];<br>int main()<br>{<br>    int t,n,i;<br>    scanf(“%d”,&amp;t);<br>    while(t–)<br>    {<br>        scanf(“%d”,&amp;n);<br>        for(i=0;i&lt;n;++i)<br>            scanf(“%d”,&amp;a[i]);<br>        left[0]=a[0];<br>        for(i=1;i&lt;n;++i)//此时left[i]为包含i的最大字段和<br>        {<br>            if(left[i-1]&lt;0)<br>                left[i]=a[i];<br>            else<br>                left[i]=left[i-1]+a[i];<br>        }<br>        for(i=1;i&lt;n;++i)//此时left[i]为i左边（包含i这个点）的最大字段和<br>            left[i]=max(left[i],left[i-1]);<br>        right[n-1]=a[n-1];<br>        for(i=n-2;i&gt;=0;–i)<br>        {<br>            if(right[i+1]&lt;0)<br>                right[i]=a[i];<br>            else<br>                right[i]=right[i+1]+a[i];<br>        }<br>        for(i=n-2;i&gt;=0;–i)<br>            right[i]=max(right[i],right[i+1]);<br>        int ans=-10000*maxn;<br>        for(i=1;i&lt;n;++i)<br>            ans=max(ans,left[i-1]+right[i]);<br>        printf(“%d\n”,ans);<br>    }<br>    return 0;<br>} </algorithm></cstring></cstdio></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -612,7 +639,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/08/19/%E5%85%B3%E4%BA%8EUbuntu%E4%B8%ADCould%20not%20get%20lock%20_var_lib_dpkg_lock%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">http://yoursite.com/2019/08/19/%E5%85%B3%E4%BA%8EUbuntu%E4%B8%ADCould%20not%20get%20lock%20_var_lib_dpkg_lock%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</a>
+                    <a href="http://yoursite.com/2020/03/30/poj%E5%88%B7%E9%A2%98/">http://yoursite.com/2020/03/30/poj%E5%88%B7%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1076,29 +1103,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/19/%E4%B8%8A%E6%B5%B7%E4%B9%8B%E8%A1%8C%E6%94%B6%E8%8E%B7/">
+                <a href="/2020/03/30/poj%E5%88%B7%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="上海之行收获">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="poj刷题">
                         
-                        <span class="card-title">上海之行收获</span>
+                        <span class="card-title">poj刷题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            参加的比赛是世界技能大赛的子比赛，虽然我们的参赛队伍是走过程的，但是我通过与复旦大学的学术一起比赛了解到了自身的不足，同样的时间下我只完成了4页的又难看的ppt介绍，而他们完成的是10多页的而且又非常美观ppt，我想这就是差距，而且在比赛演
+                            2479：Maximum sumTime Limit: 1000MS        Memory Limit: 65536KTotal Submissions: 46793        Accepted: 14439Description
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-08-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1107,14 +1135,7 @@
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%AF%94%E8%B5%9B%E7%BB%8F%E9%AA%8C/">
-                        <span class="chip bg-color">比赛经验</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1125,24 +1146,25 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/10/c++%E5%AD%A6%E4%B9%A02/">
+                <a href="/2020/03/28/%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="c++学习2">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="名言警句">
                         
-                        <span class="card-title">c++学习2</span>
+                        <span class="card-title">名言警句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            函数重载：在同一个作用域内，可以声明几个功能类似的同名函数，但是这些同名函数的形式参数（指参数的个数、类型或者顺序）必须不同。您不能仅通过返回类型的不同来重载函数注意：重载函数的参数个数，参数类型或参数顺序三者中必须有一个不同 函数重载的规
+                            徐志摩说:“一生至少该有一次，为了某个人而忘了自己，不求结果,不求同行，不求曾经拥有,甚至不求你爱我，只求在我最美的年华里,遇见你。”
+到处都是奸淫的现象：贪心搂抱者正义，猜忌逼迫着同情，怯懦狎亵着勇敢，肉欲悔弄着恋爱，暴力侵凌着人道，黑暗
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-28
                             </span>
                         <span class="publish-author">
                             
