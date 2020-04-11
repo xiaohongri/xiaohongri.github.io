@@ -557,21 +557,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-04-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    5.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    21 分
                 </div>
                 
 				
@@ -696,6 +696,23 @@ return result.reverse().toString();</code></pre><p>}</p>
 <p>1<br>min = x if x&lt;y else y<br>B、还是三元运算符的使用，只不过 B 选项的用法在 C、Java 等语言中成立，在 Python 中没有此用法，正确用法参见选项 A。</p>
 <p>C、if 语句缺少冒号，并且正确用法如下：</p>
 <p>1<br>if (x&gt;y): print x<br>D、while 语句与 pass 语句的使用。pass语句为空语句，意义只是为了保持程序结构的完整性。该选项写法正确，故选 D。</p>
+<p>4.11：</p>
+<p>攻击者使用无效IP地址，利用TCP连接的三次握手过程，连续发送会话请求，使受害主机处于开放会话的请求之中，直至连接超时，最终因耗尽资源而停止响应。这种攻击被称为<br>正确答案: C   你的答案: B (错误)<br>DNS欺骗攻击<br>DDoS攻击<br>SYN Flooding攻击<br>重放攻击</p>
+<p>A,B两台机器都正常工作,B机器未监听任何端口.如果A机器向B机器80端口发送SYN包,会收到何种类型的回包?<br>正确答案: A   你的答案: D (错误)<br>RST包<br>ACK包<br>FIN包<br>无回应</p>
+<p>RST包用来强制关闭TCP链接。 什么时候发送RST包      1.  建立连接的SYN到达某端口，但是该端口上没有正在 监听的服务。       2. TCP收到了一个根本不存在的连接上的分节。       3. 请求超时。 使用setsockopt的SO_RCVTIMEO选项设置recv的超时时间。接收数据超时时，会发送RST包。 </p>
+<p>awk里的内置变量NF指的是 </p>
+<p>正确答案: A   你的答案: D (错误)<br>以指定分隔符号作为分隔的列数<br>AWK处理文件的个数<br>单个输入文件记录的行数<br>所有输入文件记录的行数</p>
+<p>堆排序的额外空间复杂度是（） </p>
+<p>正确答案: C   你的答案: D (错误)<br>O(n)<br>O(logn)<br>O(1)<br>视情况而定</p>
+<p>下面哪个数据库不属于NoSQL的范畴？<br>正确答案: D   你的答案: B (错误)<br>HBase<br>Cassandra<br>MongoDB<br>PostgreSQL</p>
+<p>Hbase、Cassandra是按列存储，MongoDB是文档存储，都是NoSql </p>
+<p>如果try或catch中有return语句，finally中对返回变量的改变不会影响最终的返回结果 </p>
+<p>当（）时，进程从执行状态转变为就绪状态<br>正确答案: B   你的答案: A (错误)<br>进程被调度程序选中<br>时间片到<br>等待某一事件<br>等待的事件发生</p>
+<p>以下哪一种设计模式适合解决对象之间的依赖关系？<br>正确答案: D   你的答案: A (错误)<br>工厂模式<br>外观模式<br>单例模式<br>观察者模式</p>
+<p>程序开发出现代码复用需要时，根据设计模式原则应当优先考虑使用的思想是？<br>正确答案: B   你的答案: D (错误)<br>创建<br>组合<br>继承<br>封装</p>
+<p>哪种设计模式能够在不改变对象自身的基础上，在程序运行期间给对象动态的添加职责（方法或属性）?<br>正确答案: B   你的答案: D (错误)<br>代理模式<br>装饰器模式<br>适配器模式<br>策略模式</p>
+<p>以下对数据事务四大特性(ACID)的描述不完全正确的是？<br>正确答案: B   你的答案: C (错误)<br>事务开始之前和事务结束以后，数据库的完整性没有被破坏<br>事务处理结束后，对主从数据库的数据修改都彻底完成<br>一个事务中所有操作要么全部成功，要么全部失败<br>多个并发执行的事务相互隔离</p>
+<p>1.原子性（Atomicity）：说的是一个事物内所有操作共同组成一个原子包，要么全部成功，要么全部失败。这是最基本的特性，保证了因为一些其他因素导致数据库异常，或者宕机。<br>2.一致性（consistency）：数据库事物的一致性就规定了事物提交前后，永远只可能存在事物提交前的状态和事物提交后的状态，从一个一致性的状态到另一个一致性状态，而不可能出现中间的过程态。也就是说事物的执行结果是量子化状态，而不是线性状态。<br>3.隔离性（lsolation）：事物的隔离性，基于原子性和一致性，因为事物是原子化，量子化的，所以，事物可以有多个原子包的形式并发执行，但是，每个事物互不干扰。但是，由于多个事物可能操作同一个资源，不同的事物为了保证隔离性，会有很多锁方案。<br>4.持久性（durability）：当一个事物提交之后，数据库状态永远的发生了改变，这个事物只要提交了，哪怕提交后宕机，他也确确实实的提交了，不会出现因为刚刚宕机了而让提交不生效，是要事物提交，他就像洗不掉的纹身，永远的固化了，除非你毁了硬盘。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1417,7 +1434,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.5k</span>&nbsp;字
+                class="white-color">12.7k</span>&nbsp;字
             
             
             
