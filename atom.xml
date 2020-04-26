@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-22T14:39:19.498Z</updated>
+  <updated>2020-04-26T04:10:16.459Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>远程ssh时出现自动ctrl+c问题</title>
+    <link href="http://yoursite.com/2020/04/26/%E8%BF%9C%E7%A8%8Bssh%E6%97%B6%E5%87%BA%E7%8E%B0%E8%87%AA%E5%8A%A8ctrl+c%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/04/26/%E8%BF%9C%E7%A8%8Bssh%E6%97%B6%E5%87%BA%E7%8E%B0%E8%87%AA%E5%8A%A8ctrl+c%E9%97%AE%E9%A2%98/</id>
+    <published>2020-04-26T08:31:07.000Z</published>
+    <updated>2020-04-26T04:10:16.459Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这段时间突然发现莫名其妙ssh的时候会自动ctrl+c(确切来说应该是拖动窗口的时候),特别是任务正在进行的时候来一个ctrl+c，真要抓狂，百度一下发现网上有说是词霸取词的问题，but我的词霸取词是关着的。。忽然想起前端时间词霸自动更新了，于是查看软件果然，附带了一个什么词霸秒译~</p><p>搜索词霸，关闭自启动或卸载</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>python 飞机大战源码（附带图片img文件）</title>
@@ -422,28 +444,6 @@
     <updated>2020-03-17T09:02:47.792Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>线性代数期末复习 <a href="https://www.sohu.com/a/280972453_600110" target="_blank" rel="noopener">https://www.sohu.com/a/280972453_600110</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Android</title>
-    <link href="http://yoursite.com/2019/11/12/Andriod/"/>
-    <id>http://yoursite.com/2019/11/12/Andriod/</id>
-    <published>2019-11-12T08:31:07.000Z</published>
-    <updated>2020-03-17T09:03:54.134Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>安卓编程学习 <a href="https://blog.csdn.net/m0_37868230/article/details/80748298" target="_blank" rel="noopener">https://blog.csdn.net/m0_37868230/article/details/80748298</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
