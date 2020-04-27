@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="c++笔记, 科学、学习、人情世故">
-    <meta name="description" content="
-ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.getline//读入一行 cin.peekcin.readcin.write const int SIZE（静态变量） =50//#">
+    <meta name="keywords" content="阿里云服务器问题, 科学、学习、人情世故">
+    <meta name="description" content="1、为Linux实例安装图形化桌面环境：CentOS 7此处以安装MATE桌面环境为例，步骤如下。
+说明：在安装重启后，如果卡在启动页面，需要执行以下命令，更新系统的软件包。
+yum -y upgrade远程连接并登录到Linux实例。依次">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>c++笔记 | 魏尔肖的blog</title>
+    <title>阿里云服务器问题 | 魏尔肖的blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -415,12 +416,12 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">c++笔记</h1>
+                    <h1 class="description center-align post-title">阿里云服务器问题</h1>
                 </div>
             </div>
         </div>
@@ -549,21 +550,21 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-10
+                    2020-04-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-15
+                    2020-04-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    284
+                    233
                 </div>
                 
 
@@ -586,15 +587,30 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li><p>ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.getline<br>//读入一行 cin.peekcin.readcin.write const int SIZE（静态变量） =<br>50//#difine…. argc       //参数数量argv[]      //参数EOF   —-   (-1)<br>或ifstream in(file,打开方式);     //FILE in； in.open    //打开文件 打开方式：</p>
-<ol>
-<li>List item</li>
-</ol>
-<p>ios::in     //可读ios::out<del>binary</del>app<del>trunk·</del>nocreate<del>noreplece<br>例：fstream fp(“test.txt”,ios::in|ios::out)   以可读可写打开test.txt文件<br>ofstream  out；out.open<br>函数重载：在同一个作用域内，可以声明几个功能类似的同名函数，但是这些同名函数的形式参数（指参数的个数、类型或者顺序）必须不同。您不能仅通过返回类型的不同来重载函数注意：重载函数的参数个数，参数类型或参数顺序三者中必须有一个不同<br>函数重载的规则：<br>函数名称必须相同。参数列表必须不同（个数不同、类型不同、参数排列顺序不同等）。函数的返回类型可以相同也可以不相同。仅仅返回类型不同不足以成为函数的重载。<br>指针：</del> 对象的基础–结构：</p>
-</li>
-</ol>
-
+                <p>1、为Linux实例安装图形化桌面环境：<br>CentOS 7<br>此处以安装MATE桌面环境为例，步骤如下。</p>
+<p>说明：在安装重启后，如果卡在启动页面，需要执行以下命令，更新系统的软件包。</p>
+<p>yum -y upgrade<br>远程连接并登录到Linux实例。<br>依次执行如下命令，安装MATE桌面环境。<br>yum groups install “X Window System”<br>yum groups install “MATE Desktop”<br>执行如下命令，设置默认使用图形化桌面环境启动系统。<br>systemctl set-default graphical.target<br>通过reboot命令，重启ECS实例。您也可以在ECS管理控制台中操作重启实例。</p>
+<p>2、Centos7 安装python3环境方法：<br><a href="https://jingyan.baidu.com/article/67508eb4f854cbddca1ce481.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/67508eb4f854cbddca1ce481.html</a></p>
+<p><a href="https://blog.csdn.net/qq_42353939/article/details/94609591" target="_blank" rel="noopener">https://blog.csdn.net/qq_42353939/article/details/94609591</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -619,7 +635,7 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2019/07/10/c++%E7%AC%94%E8%AE%B0/">http://yoursite.com/2019/07/10/c++%E7%AC%94%E8%AE%B0/</a>
+                    <a href="http://yoursite.com/2020/04/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%AE%E9%A2%98/">http://yoursite.com/2020/04/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%AE%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1083,29 +1099,32 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/07/10/%E5%85%B3%E4%BA%8ESSH%E8%BF%9E%E4%B8%8D%E4%B8%8Alinux/">
+                <a href="/2020/04/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="关于SSH连不上linux">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="阿里云服务器问题">
                         
-                        <span class="card-title">关于SSH连不上linux</span>
+                        <span class="card-title">阿里云服务器问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.打开虚拟机终端，输入sudo apt-get install openssh-server键入密码（装虚拟机时设的密码）2.打开mobaxterm，点击session图标，点击ssh图标，返回虚拟机输入ifconfig查询ip地址（in
+                            1、为Linux实例安装图形化桌面环境：CentOS 7此处以安装MATE桌面环境为例，步骤如下。
+说明：在安装重启后，如果卡在启动页面，需要执行以下命令，更新系统的软件包。
+yum -y upgrade远程连接并登录到Linux实例。依次
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1114,6 +1133,7 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1124,25 +1144,24 @@ ungetc（ch，stdin）；//将ch中的字符退回stdin输入流  cin.ignorecin.
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/08/sprintf%E7%9A%84%E5%BA%94%E7%94%A8/">
+                <a href="/2020/04/26/%E8%BF%9C%E7%A8%8Bssh%E6%97%B6%E5%87%BA%E7%8E%B0%E8%87%AA%E5%8A%A8ctrl+c%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="sprintf应用">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="远程ssh时出现自动ctrl+c问题">
                         
-                        <span class="card-title">sprintf应用</span>
+                        <span class="card-title">远程ssh时出现自动ctrl+c问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            sprintf(“a,b,c”);a要转换成的字符串b–”%d”c要转换的数字
-
+                            这段时间突然发现莫名其妙ssh的时候会自动ctrl+c(确切来说应该是拖动窗口的时候),特别是任务正在进行的时候来一个ctrl+c，真要抓狂，百度一下发现网上有说是词霸取词的问题，but我的词霸取词是关着的。。忽然想起前端时间词霸自动更新了
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-26
                             </span>
                         <span class="publish-author">
                             
