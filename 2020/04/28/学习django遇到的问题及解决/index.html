@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="人工智能, 科学、学习、人情世故">
-    <meta name="description" content="百度AL学习 https://aistudio.baidu.com/aistudio/projectoverview神经网络BP反向传播算法原理和详细推导流程  https://blog.csdn.net/qq_32865355/artic">
+    <meta name="keywords" content="学习django遇到的问题及解决, 科学、学习、人情世故">
+    <meta name="description" content="这次学习django是为了更加深入学习用python搭建web项目其中遇到一下问题：配置django需要配置环境：sudo pip install mysqlclient运行上述命令时报错Command “python setup.py e">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>人工智能 | 魏尔肖的blog</title>
+    <title>学习django遇到的问题及解决 | 魏尔肖的blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -414,12 +414,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">人工智能</h1>
+                    <h1 class="description center-align post-title">学习django遇到的问题及解决</h1>
                 </div>
             </div>
         </div>
@@ -548,28 +548,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-26
+                    2020-04-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-17
+                    2020-04-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    90
+                    535
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -585,7 +585,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>百度AL学习 <a href="https://aistudio.baidu.com/aistudio/projectoverview" target="_blank" rel="noopener">https://aistudio.baidu.com/aistudio/projectoverview</a><br>神经网络BP反向传播算法原理和详细推导流程  <a href="https://blog.csdn.net/qq_32865355/article/details/80260212" target="_blank" rel="noopener">https://blog.csdn.net/qq_32865355/article/details/80260212</a></p>
+                <p>这次学习django是为了更加深入学习用python搭建web项目<br>其中遇到一下问题：<br>配置django需要配置环境：<br>sudo pip install mysqlclient<br>运行上述命令时报错<br>Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-install-denc2_l0/mysqlclient/<br>先是把python3设置为默认：<br>一、下载python3：<br>wget <a href="https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz</a><br>二，解压文件，添加一些安装依赖<br>　在/usr/local/目录下解压 (习惯将这里当做文件下载，解压的地方，根据个人情况而定)<br>tar zxvf Python-3.7.4.tgz<br> 　安装依赖</p>
+<p>yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel gcc libffi-devel gcc make automake autoconf libtool libffi-devel</p>
+<p>　且需要安装一个包，libffi-devel为3.7版本需要的一个新的包，否则安装的时候报错<br>　ModuleNotFoundError: No module named ‘_ctypes’<br>yum install libffi-devel -y<br> 　进入解压目录</p>
+<p>cd Python-3.7.4<br>　进行初始配置<br>　注意：在这之前先将安装目录创建好，否则…….，这里我安装到 /usr/local/python3 目录下<br>mkdir /usr/local/python3</p>
+<p>./configure –prefix=/usr/local/python3　</p>
+<p>　执行安装<br>make &amp;&amp; make install<br> 　安装完成就配置软连接</p>
+<p>ln -s /usr/local/python3/bin/python3 /usr/bin/python3<br>ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3<br>　验证<br>1 python3 -V<br>2<br>3 pip3 -V</p>
+<p>三、配置软连接：<br> 1.若不需要将python3设置为默认:</p>
+<p>ln -s /usr/local/python3/bin/python3 /usr/bin/python3<br> 2.若需要将python3设置为默认:</p>
+<p> 即ln -s /usr/local/python3/bin/python3 /usr/bin/python，还需要修改yum配置，使用vi打开 /usr/bin/yum 即：<br>vi /usr/bin/yum<br>   将第一行的#! /usr/bin/python修改为#! /usr/bin/python2</p>
+<pre><code>2.同理 vi /usr/libexec/urlgrabber-ext-down 将文件里面的
+
+#! /usr/bin/python 也要修改为#! /usr/bin/python2</code></pre><p>3.删除原有的软连接:</p>
+<p>rm -rf /usr/bin/python<br>4.建立新的软连接:</p>
+<p>ln -s /usr/local/python3/bin/python3 /usr/bin/python</p>
+<p>最后解决pip install mysqlclient 安装报错：<br>pip install mysqlclient<br>解决成功！</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -629,7 +644,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">http://yoursite.com/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</a>
+                    <a href="http://yoursite.com/2020/04/28/%E5%AD%A6%E4%B9%A0django%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/">http://yoursite.com/2020/04/28/%E5%AD%A6%E4%B9%A0django%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1097,26 +1112,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/05/hadoop/">
+                <a href="/2020/04/28/windowsjavaweb%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8tomcat%E4%B8%8A/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="hadoop">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="windowsjavaweb项目部署到云服务器tomcat上">
                         
-                        <span class="card-title">hadoop</span>
+                        <span class="card-title">windowsjavaweb项目部署到云服务器tomcat上</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            哔哔哩哩hadoop学习 https://www.bilibili.com/video/av32081351?from=search&amp;seid=18418052343509611764
+                            Eclipse开发好的Web项目如何部署到服务器的Tomcat上：https://blog.csdn.net/weixin_40327259/article/details/80467049
 
-        document.query
+        document.queryS
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-28
                         </span>
                         <span class="publish-author">
                             
@@ -1136,24 +1151,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/16/notebook%E6%8A%A5%E9%94%99%20ImportError_%20No%20module%20named%20___/">
+                <a href="/2020/04/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="notebook报错 ImportError_ No module named ___">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="阿里云服务器问题">
                         
-                        <span class="card-title">notebook报错 ImportError_ No module named ___</span>
+                        <span class="card-title">阿里云服务器问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ImportError: No module named*先pip install *再从 d:\python\lib\site-packages中找到包将包复制到D:\ANACONDA\Lib\site-packages下，重启noteb
+                            1、为Linux实例安装图形化桌面环境：CentOS 7此处以安装MATE桌面环境为例，步骤如下。
+说明：在安装重启后，如果卡在启动页面，需要执行以下命令，更新系统的软件包。
+yum -y upgrade远程连接并登录到Linux实例。依次
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
                             </span>
                         <span class="publish-author">
                             

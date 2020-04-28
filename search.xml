@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>windowsjavaweb项目部署到云服务器tomcat上</title>
+      <link href="/2020/04/28/windowsjavaweb%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8tomcat%E4%B8%8A/"/>
+      <url>/2020/04/28/windowsjavaweb%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8tomcat%E4%B8%8A/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Eclipse开发好的Web项目如何部署到服务器的Tomcat上：<br><a href="https://blog.csdn.net/weixin_40327259/article/details/80467049" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40327259/article/details/80467049</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>学习django遇到的问题及解决</title>
+      <link href="/2020/04/28/%E5%AD%A6%E4%B9%A0django%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/"/>
+      <url>/2020/04/28/%E5%AD%A6%E4%B9%A0django%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这次学习django是为了更加深入学习用python搭建web项目<br>其中遇到一下问题：<br>配置django需要配置环境：<br>sudo pip install mysqlclient<br>运行上述命令时报错<br>Command “python setup.py egg_info” failed with error code 1 in /tmp/pip-install-denc2_l0/mysqlclient/<br>先是把python3设置为默认：<br>一、下载python3：<br>wget <a href="https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz</a><br>二，解压文件，添加一些安装依赖<br>　在/usr/local/目录下解压 (习惯将这里当做文件下载，解压的地方，根据个人情况而定)<br>tar zxvf Python-3.7.4.tgz<br> 　安装依赖</p><p>yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel gcc libffi-devel gcc make automake autoconf libtool libffi-devel</p><p>　且需要安装一个包，libffi-devel为3.7版本需要的一个新的包，否则安装的时候报错<br>　ModuleNotFoundError: No module named ‘_ctypes’<br>yum install libffi-devel -y<br> 　进入解压目录</p><p>cd Python-3.7.4<br>　进行初始配置<br>　注意：在这之前先将安装目录创建好，否则…….，这里我安装到 /usr/local/python3 目录下<br>mkdir /usr/local/python3</p><p>./configure –prefix=/usr/local/python3　</p><p>　执行安装<br>make &amp;&amp; make install<br> 　安装完成就配置软连接</p><p>ln -s /usr/local/python3/bin/python3 /usr/bin/python3<br>ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3<br>　验证<br>1 python3 -V<br>2<br>3 pip3 -V</p><p>三、配置软连接：<br> 1.若不需要将python3设置为默认:</p><p>ln -s /usr/local/python3/bin/python3 /usr/bin/python3<br> 2.若需要将python3设置为默认:</p><p> 即ln -s /usr/local/python3/bin/python3 /usr/bin/python，还需要修改yum配置，使用vi打开 /usr/bin/yum 即：<br>vi /usr/bin/yum<br>   将第一行的#! /usr/bin/python修改为#! /usr/bin/python2</p><pre><code>2.同理 vi /usr/libexec/urlgrabber-ext-down 将文件里面的#! /usr/bin/python 也要修改为#! /usr/bin/python2</code></pre><p>3.删除原有的软连接:</p><p>rm -rf /usr/bin/python<br>4.建立新的软连接:</p><p>ln -s /usr/local/python3/bin/python3 /usr/bin/python</p><p>最后解决pip install mysqlclient 安装报错：<br>pip install mysqlclient<br>解决成功！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阿里云服务器问题</title>
       <link href="/2020/04/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%AE%E9%A2%98/"/>
       <url>/2020/04/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%AE%E9%A2%98/</url>
