@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-28T10:05:01.807Z</updated>
+  <updated>2020-04-29T14:31:13.005Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python之数据导入excel</title>
+    <link href="http://yoursite.com/2020/04/29/python%E4%B9%8B%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5excel/"/>
+    <id>http://yoursite.com/2020/04/29/python%E4%B9%8B%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5excel/</id>
+    <published>2020-04-29T07:38:37.000Z</published>
+    <updated>2020-04-29T14:31:13.005Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>导入包<br>import pandas as pd<br>定义列<br>col = [‘title’,’rate’,’url’]<br>创建<br>data = pd.DataFrame(index=range(number),columns=col)<br>#number为导入行数<br>修改参数<br>    for i in range(number):<br>        data.loc[i,’title’] = json_response[‘subjects’][i][‘title’]<br>        data.loc[i, ‘rate’] = json_response[‘subjects’][i][‘rate’]<br>        data.loc[i, ‘url’] = json_response[‘subjects’][i][‘url’]<br>    print(data)<br>导入excel<br>    data.to_excel(‘output.xlsx’)#导出到excel表格</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>windowsjavaweb项目部署到云服务器tomcat上</title>
@@ -424,28 +446,6 @@
     <updated>2020-03-17T09:02:05.904Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>哔哔哩哩hadoop学习 <a href="https://www.bilibili.com/video/av32081351?from=search&amp;seid=18418052343509611764" target="_blank" rel="noopener">https://www.bilibili.com/video/av32081351?from=search&amp;seid=18418052343509611764</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>人工智能</title>
-    <link href="http://yoursite.com/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    <id>http://yoursite.com/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</id>
-    <published>2020-02-26T08:31:07.000Z</published>
-    <updated>2020-03-17T09:21:29.481Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度AL学习 <a href="https://aistudio.baidu.com/aistudio/projectoverview" target="_blank" rel="noopener">https://aistudio.baidu.com/aistudio/projectoverview</a><br>神经网络BP反向传播算法原理和详细推导流程  <a href="https://blog.csdn.net/qq_32865355/article/details/80260212" target="_blank" rel="noopener">https://blog.csdn.net/qq_32865355/article/details/80260212</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
