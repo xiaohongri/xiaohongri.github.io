@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-06T04:27:47.900Z</updated>
+  <updated>2020-05-12T07:36:11.418Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ValueError threshold must be numeric and non-NAN, try sys.maxsize for untruncated representation</title>
+    <link href="http://yoursite.com/2020/05/12/ValueError%20threshold%20must%20be%20numeric%20and%20non-NAN,try%20sys.maxsize%20for%20untruncated%20representation/"/>
+    <id>http://yoursite.com/2020/05/12/ValueError%20threshold%20must%20be%20numeric%20and%20non-NAN,try%20sys.maxsize%20for%20untruncated%20representation/</id>
+    <published>2020-05-12T11:58:50.000Z</published>
+    <updated>2020-05-12T07:36:11.418Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>python3不支持, 改成:<br>import sys<br>np.set_printoptions(threshold=sys.maxsize)</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>阿里云CentOS 7.6 crontab定时任务|定时执行python脚本</title>
@@ -420,28 +442,6 @@
     <id>http://yoursite.com/2020/03/14/ceshi/</id>
     <published>2020-03-14T04:04:49.000Z</published>
     <updated>2020-03-14T04:04:49.890Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>My New Post</title>
-    <link href="http://yoursite.com/2020/03/14/My-New-Post/"/>
-    <id>http://yoursite.com/2020/03/14/My-New-Post/</id>
-    <published>2020-03-14T03:24:07.000Z</published>
-    <updated>2020-03-14T03:24:07.503Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     

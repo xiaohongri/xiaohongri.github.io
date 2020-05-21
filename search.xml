@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>ValueError threshold must be numeric and non-NAN, try sys.maxsize for untruncated representation</title>
+      <link href="/2020/05/12/ValueError%20threshold%20must%20be%20numeric%20and%20non-NAN,try%20sys.maxsize%20for%20untruncated%20representation/"/>
+      <url>/2020/05/12/ValueError%20threshold%20must%20be%20numeric%20and%20non-NAN,try%20sys.maxsize%20for%20untruncated%20representation/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>python3不支持, 改成:<br>import sys<br>np.set_printoptions(threshold=sys.maxsize)</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阿里云CentOS 7.6 crontab定时任务|定时执行python脚本</title>
       <link href="/2020/05/06/%E9%98%BF%E9%87%8C%E4%BA%91centos%E5%AE%9A%E6%97%B6%E6%9C%8D%E5%8A%A1%E5%B9%B6%E6%89%A7%E8%A1%8Cpython/"/>
       <url>/2020/05/06/%E9%98%BF%E9%87%8C%E4%BA%91centos%E5%AE%9A%E6%97%B6%E6%9C%8D%E5%8A%A1%E5%B9%B6%E6%89%A7%E8%A1%8Cpython/</url>
@@ -294,7 +307,7 @@
       <link href="/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
       <url>/2020/02/26/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度AL学习 <a href="https://aistudio.baidu.com/aistudio/projectoverview" target="_blank" rel="noopener">https://aistudio.baidu.com/aistudio/projectoverview</a><br>神经网络BP反向传播算法原理和详细推导流程  <a href="https://blog.csdn.net/qq_32865355/article/details/80260212" target="_blank" rel="noopener">https://blog.csdn.net/qq_32865355/article/details/80260212</a></p><p>深度学习使用步骤：<br>建立模型：<br>选择什么样的网络结构<br>选择多少层数，每层选择多少神经元<br>损失函数：<br>选择常用损失函数，平方误差，交叉熵<br>参数学习：<br>梯度下降<br>反向传播算法</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>百度AL学习 <a href="https://aistudio.baidu.com/aistudio/projectoverview" target="_blank" rel="noopener">https://aistudio.baidu.com/aistudio/projectoverview</a><br>神经网络BP反向传播算法原理和详细推导流程  <a href="https://blog.csdn.net/qq_32865355/article/details/80260212" target="_blank" rel="noopener">https://blog.csdn.net/qq_32865355/article/details/80260212</a></p><p>深度学习：<br>建立模型<br>选择什么样的网络结构<br>选择多少层数，每层选择多少神经元<br>损失函数<br>选择常用损失函数，平方误差，交叉熵….<br>参数学习<br>梯度下降<br>反向传播算法</p><p>卷积神经网络使用步骤：<br>建立模型：<br>选择什么样的网络结构<br>选择多少层数，每层选择多少神经元<br>损失函数：<br>选择常用损失函数，平方误差，交叉熵<br>参数学习：<br>梯度下降<br>反向传播算法</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       

@@ -28,8 +28,8 @@
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="魏尔肖的blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="魏尔肖的blog" type="application/atom+xml">
+</head>
 
 
 
@@ -517,7 +517,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.6k</span>&nbsp;字
+                class="white-color">14.8k</span>&nbsp;字
             
             
             
@@ -708,6 +708,36 @@ var windowWidth = $(window).width();
 if (windowWidth > 768) {
     document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
 }
+</script>
+
+
+<!--看版娘-->
+<!-- 右下角live2d效果 -->
+<script type="text/javascript" charset="utf-8" async="" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+<!-- 右下角live2d效果 -->
+<script type="text/javascript">
+setTimeout(() => {
+     L2Dwidget.init({
+             "model": {
+                     "scale": 0.5
+             },
+             "display": {
+                     "position": "right",
+                    "width": 180,
+                    "height": 260,
+                    "hOffset": 0,
+                    "vOffset": -20
+            },
+            "mobile": {
+                    "show": true,
+                    "scale": 0.5
+            },
+            "react": {
+                    "opacityDefault": 0.7,
+                    "opacityOnHover": 0.2
+            }
+    });
+}, 1000)
 </script>
 
 </html>
