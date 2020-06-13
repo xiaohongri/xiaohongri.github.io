@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-12T07:36:11.418Z</updated>
+  <updated>2020-06-13T10:26:24.663Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库</title>
+    <link href="http://yoursite.com/2020/06/13/Qt%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E5%90%8E%E6%8A%A5%E9%94%99%E2%80%9C%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E7%82%B9%E4%BA%8E%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/"/>
+    <id>http://yoursite.com/2020/06/13/Qt%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E5%90%8E%E6%8A%A5%E9%94%99%E2%80%9C%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E7%82%B9%E4%BA%8E%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/</id>
+    <published>2020-06-13T08:31:07.000Z</published>
+    <updated>2020-06-13T10:26:24.663Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库….. .exe上。”解决办法</p><p>在将 Qt 程序构建、运行、打包之后点击生成的 exe 文件发现出现以下“无法找到入口”错误。</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dXdicGcya2ozMGN6MDRxdDhzLmpwZw?x-oss-process=image/format,png" alt=""></p><p>无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库….. .exe上。<br>1<br>之后发现是因为构建项目时使用的编译工具和打包软件时使用的编译工具不一样所导致的。<br>打包Qt项目的过程如下：</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3djg3ZzNmM2ozMDl6MDdpYWE2LmpwZw?x-oss-process=image/format,png" alt=""></p><p>使用 Qt Create 打开项目。<br>如下图所示，选择 release ，有时需要选择编译工具，可以看到图中的编译工具是MinGW 32bit。</p><p>编译之后在工程项目文件夹下可看到 release 文件夹</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmFmcmRnbGozMGdsMDJnbXg3LmpwZw?x-oss-process=image/format,png" alt=""></p><p>打开关于release相关的文件夹，找到该目录下release目录下的.exe程序。将这个.exe文件拷贝出来，创建一个单独的文件夹，放在这个文件夹下。<br>从Windows图标找到Qt软件，如下图所示，本人电脑里有5个编译工具，找到与第一步里相同的编译工具，打开。</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmVvdnhua2ozMDh3MGd4MHhyLmpwZw?x-oss-process=image/format,png" alt=""></p><p>如图所示：</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmk1MGtwYmozMDl2MDNjMHNsLmpwZw?x-oss-process=image/format,png" alt=""></p><p>在该命令行窗口中通过盘符和cd命令转到才拷贝出来的exe程序所在的目录。</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmxnZ21yOWozMDhxMDRhYTl5LmpwZw?x-oss-process=image/format,png" alt=""></p><p>使用windeployqt命令打包，即windeployqt 文件名.exe 敲击回车。这一步操作是将所需的库文件全都拷贝到exe程序的当前文件：</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dm92YWk2MmozMGs3MG5sNzViLmpwZw?x-oss-process=image/format,png" alt=""></p><p>此时程序目录如下，点击exe文件即可正常运行程序。将该目录整体拷贝到其它Windows系统中也可直接运行。</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dnFlMmozd2ozMGc3MDlrbXllLmpwZw?x-oss-process=image/format,png" alt=""></p><p>有数据库编程的需要将对应libmysql.dll添加到exe文件同目录下，我这里用的是qt安装包里的libmysql.dll</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ValueError threshold must be numeric and non-NAN, try sys.maxsize for untruncated representation</title>
@@ -422,28 +444,6 @@
     <updated>2020-03-15T12:31:34.950Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>打开c盘，点击查看，勾选隐藏的项目，然后进入ProgramDate找到MySql并删除，如果显示正在使用则打开任务管理器停止即可。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ceshi</title>
-    <link href="http://yoursite.com/2020/03/14/ceshi/"/>
-    <id>http://yoursite.com/2020/03/14/ceshi/</id>
-    <published>2020-03-14T04:04:49.000Z</published>
-    <updated>2020-03-14T04:04:49.890Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     
     <summary type="html">
     

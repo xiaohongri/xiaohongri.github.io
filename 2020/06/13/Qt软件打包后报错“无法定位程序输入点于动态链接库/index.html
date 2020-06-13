@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="c++, 科学、学习、人情世故">
-    <meta name="description" content="c++ | 魏尔肖的blog">
+    <meta name="keywords" content="Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库, 科学、学习、人情世故">
+    <meta name="description" content="Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库….. .exe上。”解决办法
+在将 Qt 程序构建、运行、打包之后点击生成的 exe 文件发现出现以下“无法找到入口”错误">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>c++ | 魏尔肖的blog</title>
+    <title>Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库 | 魏尔肖的blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -414,12 +415,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">c++</h1>
+                    <h1 class="description center-align post-title">Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库</h1>
                 </div>
             </div>
         </div>
@@ -548,21 +549,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-15
+                    2020-06-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-15
+                    2020-06-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    495
                 </div>
                 
 
@@ -585,7 +586,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库….. .exe上。”解决办法</p>
+<p>在将 Qt 程序构建、运行、打包之后点击生成的 exe 文件发现出现以下“无法找到入口”错误。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dXdicGcya2ozMGN6MDRxdDhzLmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库….. .exe上。<br>1<br>之后发现是因为构建项目时使用的编译工具和打包软件时使用的编译工具不一样所导致的。<br>打包Qt项目的过程如下：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3djg3ZzNmM2ozMDl6MDdpYWE2LmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>使用 Qt Create 打开项目。<br>如下图所示，选择 release ，有时需要选择编译工具，可以看到图中的编译工具是MinGW 32bit。</p>
+<p>编译之后在工程项目文件夹下可看到 release 文件夹</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmFmcmRnbGozMGdsMDJnbXg3LmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>打开关于release相关的文件夹，找到该目录下release目录下的.exe程序。将这个.exe文件拷贝出来，创建一个单独的文件夹，放在这个文件夹下。<br>从Windows图标找到Qt软件，如下图所示，本人电脑里有5个编译工具，找到与第一步里相同的编译工具，打开。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmVvdnhua2ozMDh3MGd4MHhyLmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>如图所示：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmk1MGtwYmozMDl2MDNjMHNsLmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>在该命令行窗口中通过盘符和cd命令转到才拷贝出来的exe程序所在的目录。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dmxnZ21yOWozMDhxMDRhYTl5LmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>使用windeployqt命令打包，即windeployqt 文件名.exe 敲击回车。这一步操作是将所需的库文件全都拷贝到exe程序的当前文件：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dm92YWk2MmozMGs3MG5sNzViLmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>此时程序目录如下，点击exe文件即可正常运行程序。将该目录整体拷贝到其它Windows系统中也可直接运行。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3d3MS5zaW5haW1nLmNuL2xhcmdlLzAwNjJhSU9FbHkxZzd3dnFlMmozd2ozMGc3MDlrbXllLmpwZw?x-oss-process=image/format,png" alt=""></p>
+<p>有数据库编程的需要将对应libmysql.dll添加到exe文件同目录下，我这里用的是qt安装包里的libmysql.dll</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -610,7 +648,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/c/index.html">http://yoursite.com/c/index.html</a>
+                    <a href="http://yoursite.com/2020/06/13/Qt%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E5%90%8E%E6%8A%A5%E9%94%99%E2%80%9C%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E7%82%B9%E4%BA%8E%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/">http://yoursite.com/2020/06/13/Qt%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E5%90%8E%E6%8A%A5%E9%94%99%E2%80%9C%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E7%82%B9%E4%BA%8E%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1079,24 +1117,25 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/c/index.html">
+                <a href="/2020/06/13/Qt%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E5%90%8E%E6%8A%A5%E9%94%99%E2%80%9C%E6%97%A0%E6%B3%95%E5%AE%9A%E4%BD%8D%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E7%82%B9%E4%BA%8E%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="c++">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库">
                         
-                        <span class="card-title">c++</span>
+                        <span class="card-title">Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Qt软件打包后报错“无法定位程序输入点_ZN10QArrayData10deallocateEPs_jj于动态链接库….. .exe上。”解决办法
+在将 Qt 程序构建、运行、打包之后点击生成的 exe 文件发现出现以下“无法找到入口”错误
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-13
                             </span>
                         <span class="publish-author">
                             
@@ -1114,27 +1153,30 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/c/index.html">
+                <a href="/2020/05/12/ValueError%20threshold%20must%20be%20numeric%20and%20non-NAN,try%20sys.maxsize%20for%20untruncated%20representation/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="c++">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="ValueError threshold must be numeric and non-NAN, try sys.maxsize for untruncated representation">
                         
-                        <span class="card-title">c++</span>
+                        <span class="card-title">ValueError threshold must be numeric and non-NAN, try sys.maxsize for untruncated representation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            python3不支持, 改成:import sysnp.set_printoptions(threshold=sys.maxsize)
+
+        document.querySelectorAll('.github-emoji')
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
                             </span>
                         <span class="publish-author">
                             
@@ -1144,7 +1186,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
