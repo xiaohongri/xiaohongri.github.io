@@ -1,0 +1,2010 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="计网实验报告, 科学、学习、人情世故">
+    <meta name="description" content="
+
+
+\实验名称**
+实验1  WireShark的使用
+
+
+
+
+
+
+
+\实验时间**
+2020年10月7日 10:00-11:40时
+\实验地点**
+计通楼210
+\实验学时**
+2学时
+
+
+\实验类型**
+验证
+\实验性质**
+必修
+
+">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>计网实验报告 | 魏尔肖的blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="魏尔肖的blog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">魏尔肖的blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">魏尔肖的blog</div>
+        <div class="logo-desc">
+            
+            这个博客挺傻哦~
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/musics " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/movies " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/books " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/galleries " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+               
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">计网实验报告</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-12
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-13
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    8.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    32 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <table>
+<thead>
+<tr>
+<th><strong><em>\</em>实验名称**</strong></th>
+<th>实验1  WireShark的使用</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><em>\</em>实验时间**</strong></td>
+<td>2020年10月7日 10:00-11:40时</td>
+<td><strong><em>\</em>实验地点**</strong></td>
+<td>计通楼210</td>
+<td><strong><em>\</em>实验学时**</strong></td>
+<td>2学时</td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验类型**</strong></td>
+<td>验证</td>
+<td><strong><em>\</em>实验性质**</strong></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验环境**</strong></td>
+<td>网络环境：如实验室以太网、寝室无线局域网等硬件配置：包括CPU、主存容量、网络适配器数据率等操作系统：windows实验软件：如wireshark、IE等</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验目的**</strong></td>
+<td>1. 认识协议分析软件WireShark。2. 初步熟悉WireShark的使用方法。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验原理*****</strong>*（预备知识）****</td>
+<td>Wireshark 是网络包分析工具。网络包分析工具的主要作用是尝试捕获网络包， 并尝试显示包的尽可能详细的情况。 你可以把网络包分析工具当成是一种用来测量有什么东西从网线上进出的测量工具，就好像使电工用来测量进入电信的电量的电度表一样。（当然比那个更高级） 过去的此类工具要么是过于昂贵，要么是属于某人私有，或者是二者兼顾。 Wireshark出现以后，这种现状得以改变。 Wireshark可能算得上是今天能使用的最好的开元网络分析软件。 主要应用于网络管理员用来解决网络问题、网络安全工程师用来检测安全隐患、开发人员用来测试协议执行情况和用来学习网络协议等场合。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验内容（实验步骤和方法）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1、熟悉界面      （1）第一部分是菜单和工具栏，wireshark提供的所有功能都可以在这一部分中找到。（2）第二部分是被捕获包的列表，其中包含被捕获包的一般信息，如被捕获的时间、源和目的IP地址、所属的协议类型，以及包的类型等信息。（3）第三部分显示第二部分已选中的包的每个域的具体信息，从以太网帧的首部到该包中负载内容，都显示得清清楚楚。（4）第四部分显示已选中包的16进制和ASCII表示，帮助用户了解一个包的本来样子。 2、抓包 （1）选择“Capture”菜单项中的 “Option”,这时会弹出一个对话框，如下所示。        这个对话框中的栏目虽然很多，但一般只需配置其中两项。一项是 “Capture Filter”栏。在这个栏中，可以输入过滤规则，用于规定wireshark捕获包的种类；如果不输入过滤规则，则wireshark将捕获所有从网卡发送或收到的包。另外一项是 “Update list of packets in real time”选项，请大家一定要选中这一项，这样可以使Ethereal在捕获包的同时，实时地把捕获的包显示出来。(2)在完成如上配置后，点击　“Start”按钮，Ethereal便开始捕获包。3、对所抓取的TCP数据包解释    帧号 时间  源地址        目的地址       高层协议 包内信息概况    No.  Time   Source         Destination      Protocol  Info   1 0.000000  202.203.44.225  202.203.208.32  TCP   2764 &gt; http [SYN]  Seq=0 Len=0 MSS=1460  源端口&gt;目的端口[请求建立TCP链接]—————————————————————————————————           以下为物理层的数据帧概况   Frame 1 (62 bytes on wire, 62 bytes captured) 1号帧，线路62字节，实际捕获62字节   Arrival Time: Jan 21, 2008 15:17:33.910261000   捕获日期和时间    [Time delta from previous packet:0.00000 seconds]此包与前一包的时间间隔    [Time since reference or first frame: 0.00 seconds]此包与第1帧的间隔时间    Frame Number: 1                  帧序号    Packet Length: 62 bytes              帧长度    Capture Length: 62 bytes              捕获长度    [Frame is marked: False]              此帧是否做了标记：否    [Protocols in frame: eth:ip:tcp]          帧内封装的协议层次结构    [Coloring Rule Name: HTTP]      用不同颜色染色标记的协议名称：HTTP    [Coloring Rule String: http || tcp.port == 80]   染色显示规则的字符串：—————————————————————————————————          以下为数据链路层以太网帧头部信息   Ethernet II, Src: AcerTech_5b:d4:61 (00:00:e2:5b:d4:61), Dst: Jetcell_e5:1d:0a (00:d0:2b:e5:1d:0a)   以太网协议版本II，源地址：厂名_序号（网卡地址），目的：厂名_序号（网卡地址）   Destination: Jetcell_e5:1d:0a (00:d0:2b:e5:1d:0a) 目的：厂名_序号（网卡地址）   Source: AcerTech_5b:d4:61 (00:00:e2:5b:d4:61) 源：厂名_序号（网卡地址）   Type: IP (0x0800) 帧内封装的上层协议类型为IP（十六进制码0800）—————————————————————————————————          以下为互联网层IP包头部信息   Internet Protocol, Src: 202.203.44.225 (202.203.44.225), Dst: 202.203.208.32   (202.203.208.32)              互联网协议，源IP地址，目的IP地址   Version: 4 互联网协议IPv4（请参考书上P122页IPv4数据报字段结构）   Header length: 20 bytes           IP包头部长度   Differentiated Services Field:0x00(DSCP 0x00:Default;ECN:0x00)差分服务字段   Total Length: 48         IP包的总长度   Identification:0x8360 (33632)        标志字段   Flags:    标记字段（在路由传输时，是否允许将此IP包分段，教材125页）   Fragment offset: 0  分段偏移量（将一个IP包分段后传输时，本段的标识）   Time to live: 128                 生存期TTL   Protocol: TCP (0x06)         此包内封装的上层协议为TCP   Header checksum: 0xe4ce [correct]     头部数据的校验和   Source: 202.203.44.225 (202.203.44.225)    源IP地址    描述一下WireShark的设置选项，比如如何设置选定网卡，如何设置过滤器等；</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验结果（根据实验内容回答问题）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1.WireShark协议分析软件的功能有哪些？Wireshark的常用功能分为四个方面： 一般分析任务 （1）找出在一个网络内发送数据包最多的主机 （2）查看网络通信 （3）查看某个主机使用了哪些程序 （4）基本正常的网络通信 （5）验证特有的网络操作 （6）了解尝试连接无线网络的用户 （7）同时捕获多个网络的数据 （8）实施无人值守数据捕获 （9）捕获并分析到/来自一个特定主机或子网的数据 （10）通过FTP或HTTP查看和重新配置文件传输 （11）从其他捕获工具导入跟踪文件 （12）使用最少的资源捕获数据 故障任务 （1）为故障创建一个自定义的分析环境 （2）确定路径，客户端和服务延迟 （3）确定TCP问题 （4）检查HTTP代理问题 （5）检查应用程序错误响应 （6）通过查看图形显示的结果，找到相关的网络问题 （7）确定重载的缓冲区 （8）比较缓慢的通信到正常通信的一个基准 （9）找出重复的IP地址 （10）确定DHCP服务或网络代理问题 （11）确定WLAN信号强度问题 （12）检测WLAN连接的次数 （13）检查各种网络配置错误 （14）确定应用程序正在加载一个网络片段 安全分析（网络取证）任务 （1）为网络取证创建一个自定义分析环境 （2）检查使用非标准端口的应用程序 （3）确定到/来自可疑主机的数据 （4）查看哪台主机正在尝试获取一个IP地址 （5）确定phone home数据 （6）确定网络侦查环境 （7）全球定位和映射远程目标地址 （8）检查可疑数据重定向 （9）检查单个TCP或UDP客户端和服务器之间的会话 （10）检查到恶意畸形的帧 （11）在网络数据中找出攻击签名的关键因素 应用程序分析任务 （1）了解应用程序和协议如何工作 （2）了解图形应用程序的带宽使用情况 （3）确定是否将支持应用程序的链接 （4）更新/升级后检查应用程序性能 （5）从一个新安装的应用程序中检查错误响应 （6）确定从哪个用户正在运行一个特定的应用程序 （7）检查应用程序如何使用传输协议，如TCP或UDP2.WireShark主界面有哪几部分组成？打开桌面上的wireshark工具，Wireshark主界面可以分为如下七个部分，1：主菜单栏、2：快捷方式、3：过滤栏、4：数据包列表区、5：数据包详细信息区、6：比特区、7：数据包统计区域菜单栏选项介绍1、Flie（文件）栏用于打开，合并捕捉文件，保存，打印，另存，导出捕捉文件的全部或另存，以及退出Wireshark等等操作2、Edit（编辑）菜单栏，包括查询数据包，时间设置，数据包标志，设置预设参数等3、View（试图）控制捕捉数据的显示方式，包括颜色，字体缩放，将包显示在分离的窗口，展开或收缩详情面板4、Capture（捕获）菜单栏，选择网卡，开始，停止抓包，过滤器等操作5、Analyze（分析）菜单栏，显示过滤器，tcp、udp包追踪等功能6、Statistics（统计）栏，数据汇总信息，会话选项，节点统计，IO图，流量图等，做出会话报表7、Telephony（电话）支持语音流量抓取功能8、Tools（工具）栏9、Help帮助界面快捷方式菜单1、使用工具中的常用按钮，分别有：查看网卡，列出接口选项，启动，停止，重置，打开，着色…等过滤栏1、过滤基于arp协议的数据包，在Filter栏输入arp，回车，列出基于arp的所有数据包数据包列表区1、数据包列表区列出了包的时间流、源IP、目的IP、协议、信息数据详细信息区1、在列表区选中数据包的时候，数据包的详细信息显示在下方，我们称为详细信息区比特区1、数据包字节，十六进制信息，通过比特区看到更详细的字段信息<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps3.jpg" alt="img">)3.如何理解所抓到的包的内容？<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps4.jpg" alt="img"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>成绩：**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong><em>\</em>实验名称**</strong></th>
+<th>实验二  802.3协议分析和以太网</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><em>\</em>实验时间**</strong></td>
+<td>2020年  月  日 10:00-11:40时</td>
+<td><strong><em>\</em>实验地点**</strong></td>
+<td>计通楼210</td>
+<td><strong><em>\</em>实验学时**</strong></td>
+<td>2学时</td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验类型**</strong></td>
+<td>验证</td>
+<td><strong><em>\</em>实验性质**</strong></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验环境**</strong></td>
+<td>网络环境：如实验室以太网、寝室无线局域网等硬件配置：包括CPU、主存容量、网络适配器数据率等操作系统：windows实验软件：如wireshark、IE等</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验目的**</strong></td>
+<td>1.分析802.3协议2.熟悉以太网帧的格式3.熟悉ARP报文的格式</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验原理*****</strong>*（预备知识）****</td>
+<td>要深入理解网络协议，需要仔细观察协议实体之间交换的报文序列。为探究协议操作细节，可使协议实体执行某些动作，观察这些动作及其影响。这些任务可以在仿真环境下或在如因特网这样的真实网络环境中完成。观察在正在运行协议实体间交换报文的基本工具被称为分组嗅探器（packet sniffer）。顾名思义，一个分组嗅探器捕获（嗅探）计算机发送和接收的报文。一般情况下，分组嗅探器将存储和显示出被捕获报文的各协议头部字段内容。图1为一个分组嗅探器的结构。<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps5.png" alt="img">  图1右边是计算机上正常运行的协议（在这里是因特网协议）和应用程序（如：web浏览器和ftp客户端）。分组嗅探器（虚线框中的部分）是附加计算机普通软件上的，主要有两部分组成。分组捕获库接收计算机发送和接收的每一个链路层帧的拷贝。高层协议（如：HTTP、FTP、TCP、UDP、DNS、IP等）交换的报文都被封装在链路层帧(Frame)中，并沿着物理介质（如以太网的电缆）传输。图1假设所使用的物理媒体是以太网，上层协议的报文最终封装在以太网帧中。  分组嗅探器的第二个组成部分是分析器。分析器用来显示协议报文所有字段的内容。为此，分析器必须能够理解协议所交换的所有报文的结构。例如：我们要显示图1中HTTP协议所交换的报文的各个字段。分组分析器理解以太网帧格式，能够识别包含在帧中的IP数据报。分组分析器也要理解IP数据报的格式，并能从IP数据报中提取出TCP报文段。然后，它需要理解TCP报文段，并能够从中提取出HTTP消息。最后，它需要理解HTTP消息。  WireShark是一种可以运行在Windows, UNIX, Linux等操作系统上的分组分析器.用户界面如图2所示。最初，各窗口中并无数据显示。WireShark的界面主要有五个组成部分：<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps6.jpg" alt="img"> 图2  WireShark的用户界面  命令菜单（command menus）：命令菜单位于窗口的最顶部，是标准的下拉式菜单。最常用菜单命令有两个：File、Capture。File菜单允许你保存捕获的分组数据或打开一个已被保存的捕获分组数据文件或退出WireShark程序。Capture菜单允许你开始捕获分组。     捕获分组列表（listing of captured packets）：按行显示已被捕获的分组内容，其中包括：WireShark赋予的分组序号、捕获时间、分组的源地址和目的地址、协议类型、分组中所包含的协议说明信息。单击某一列的列名，可以使分组按指定列进行排序。在该列表中，所显示的协议类型是发送或接收分组的最高层协议的类型。  分组头部明细（details of selected packet header）：显示捕获分组列表窗口中被选中分组的头部详细信息。包括：与以太网帧有关的信息，与包含在该分组中的IP数据报有关的信息。单击以太网帧或IP数据报所在行左边的向右或向下的箭头可以展开或最小化相关信息。另外，如果利用TCP或UDP承载分组，WireShark也会显示TCP或UDP协议头部信息。最后，分组最高层协议的头部字段也会显示在此窗口中。  分组内容窗口（packet content）：以ASCII码和十六进制两种格式显示被捕获帧的完整内容。  显示筛选规则（display filter specification）：在该字段中，可以填写协议的名称或其他信息，根据此内容可以对分组列表窗口中的分组进行过滤。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验内容（实验步骤和方法）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>1.</strong>   WireShark的使用及捕获并分析以太帧（1） 清空浏览器缓存（在IE窗口中，选择“工具/Internet选项/删除文件”命令）。（2） 启动WireShark，开始分组捕获。（3） 启动主机上的web浏览器。（4） 启动WireShark。窗口中没有任何分组列表。（5） 开始分组捕获：选择“capture”下拉菜单中的“Optios”命令，会出现如图1所示的“WireShark: Capture Options”窗口，可以设置分组捕获的选项。<a href="#blogid=63258d650100fvkp&amp;url=http://static14.photo.sina.com.cn/orignal/63258d65g798514b42ebd&amp;690"><img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps7.png" alt="img"></a>                 图1 WireShark的Capture Option（6）  在实验中，可以使用窗口中显示的默认值。在“WireShark: Capture Options”窗口的最上面有一个“interface”下拉菜单，其中显示计算机中所安装的网络接口（即网卡）。当计算机具有多个活动网卡（装有多块网卡，并且均正常工作）时，需要选择其 中一个用来发送或接收分组的网络接口（如某个有线接口）。（7）  随后，单击“Start”开始进行分组捕获，所有由选定网卡发送和接收的分组都将被捕获。（8） 开始分组捕获后，会出现分组捕获统计窗口。该窗口统计显示各类已捕获分组的数量。在该窗口中有一个“stop”按钮，可以停止分组的捕获。（9）  在运行分组捕获的同时，在浏览器地址栏中输入某网页的URL，如：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>。为显示该网页，浏览器需要连接<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>的服务器，并与之交换HTTP消息，以下载该网页。包含这些HTTP消息的以太网帧(Frame)将被WireShark捕获。  WireShark主窗口显示已捕获的你的计算机与其他网络实体交换的所有协议报文，其中一部分就是与<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>服务器交换的HTTP消息。（10） 在显示筛选编辑框中输入“http”，单击“apply”，分组列表窗口将只显示HTTP消息。（11） 选择分组列表窗口中的第一条HTTP消息。它应该是你的计算机发向<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>服务器的HTTP GET（HTTP定义的用于获取/查询资源信息的方法）消息。（12） 选择“Analyze-&gt;Enabled Protocols”，取消对IP复选框的选择，单击OK。当你选择该消息后，以太网帧、IP数据报、TCP报文段、以及HTTP消息首部信息都将显示在分组首部子窗口中。单击分组首部详细信息子窗口中向右和向下箭头，可以最小化帧、以太网、IP、TCP信息显示量，可以最大化HTTP协议相关信息 的显示量。 （13） 选择包含HTTP GET消息的以太网帧，在分组详细信息窗口中，展开Ethernet II部分。根据操作，回答“五、实验报告内容”中的1-4题（14） 选择包含HTTP 响应消息第一个字节的以太网帧，根据操作，回答“五、实验报告内容”中的5-8题<strong>2.</strong> <strong><em>\</em>ARP**</strong>（1） 利用MS-DOS命令：arp -a查看主机上ARP缓存的内容。根据操作，回答“四、实验报告内容”中的9题。（2） 利用MS-DOS命令：arp -d  *  以清除主机中ARP缓存的内容。（3） 清除浏览器缓存。（4） 启动WireShark，开始分组捕获。（5） 在浏览器的地址栏中输入：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 浏览器将显示百度搜索网页。（6） 停止分组捕获。选择“Analyze-&gt;Enabled Protocols”，取消对IP复选框的选择，单击OK。根据操作，回答“五、实验报告内容”中的10-13题。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验结果（根据实验内容回答问题）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps8.jpg" alt="img">)4.你的主机的48位以太网地址(MAC地址)是多少？ 5.目标MAC地址是<a href="http://www.baidu.com服务器的MAC地址吗？如果不是，该地址是什么设备的MAC地址？不是，是该实验室路由器的mac地址。![img](https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps9.jpg)6">www.baidu.com服务器的MAC地址吗？如果不是，该地址是什么设备的MAC地址？不是，是该实验室路由器的mac地址。![img](https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps9.jpg)6</a>. 给出Frame头部Type字段(2字节)的十六进制值。<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps10.jpg" alt="img">8c7. 在包含“HTTP GET”的以太网帧中，字符“G”的位置(是第几个字节，假设Frame头部第一个字节的顺序为1)？558. 以太Frame的源MAC地址是多少？该地址是你主机的MAC地址吗？是<a href="http://www.baidu.com服务器的MAC地址吗？如果不是，该地址是什么设备的MAC地址？地址是：8c:dc:d4:3d:54:71，不是，是路由器的mac地址![img](https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps11.jpg)9.以太网帧的目的MAC地址是多少？该地址是你主机的地址吗？地址是:8c:dc:d4:41:01:00，不是![img](https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps12.jpg)10">www.baidu.com服务器的MAC地址吗？如果不是，该地址是什么设备的MAC地址？地址是：8c:dc:d4:3d:54:71，不是，是路由器的mac地址![img](https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps11.jpg)9.以太网帧的目的MAC地址是多少？该地址是你主机的地址吗？地址是:8c:dc:d4:41:01:00，不是![img](https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps12.jpg)10</a>. 给出Frame头部2-字节Type字段的十六进制值。<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps13.jpg" alt="img"> 11.在包含“OK”以太网帧中，从该帧的第一个字节算起，”O”是第几个字节？  <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps14.jpg" alt="img"> 12.写下你主机ARP缓存中的内容。其中每一列的含义是什么？接口是自己的地址，Internet是路由器分配的地址，剩下的是动态的物理地<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps15.jpg" alt="img">址。13.包含ARP请求报文的以太网帧的源地址和目的地址的十六进制值各是多少？8c:dc:d4:41:00:2d ff ff ff ff ff ff <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps16.jpg" alt="img">14. 给出Frame头部Type字段的十六进制值。Ff ff ff<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps17.jpg" alt="img">15. 在ARP报文中是否包含发送方的IP地址？包含<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps18.jpg" alt="img">)<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps19.jpg" alt="img">)16.包含ARP响应(reply)报文的以太网帧中，源地址和目的地址的十六进制值各是多少？8c:dc:d4:41:00:2d 8c:dc:d4:3d:54:71</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>成绩：**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong><em>\</em>实验名称**</strong></th>
+<th>实验三 IP层协议分析</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><em>\</em>实验时间**</strong></td>
+<td>2020年  月  日 10:00-11:40时</td>
+<td><strong><em>\</em>实验地点**</strong></td>
+<td>计通楼210</td>
+<td><strong><em>\</em>实验学时**</strong></td>
+<td>2学时</td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验类型**</strong></td>
+<td>验证</td>
+<td><strong><em>\</em>实验性质**</strong></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验环境**</strong></td>
+<td>网络环境：如实验室以太网、寝室无线局域网等硬件配置：包括CPU、主存容量、网络适配器数据率等操作系统：windows实验软件：如wireshark、IE等</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验目的**</strong></td>
+<td>1. 了解ICMP、IP数据包格式；2. 掌握IP 数据报的组成和各字段的功能，分析数据报的IP首部；3. 理解ARP、ICMP与IP的关系；4. 理解ARP命令、PING命令与ARP、ICMP协议的关系；5. 熟悉ARP和ICMP协议包格式；6. 了解ARP、ICMP会话过程。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验原理*****</strong>*（预备知识）****</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验内容（实验步骤和方法）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>（说明：以下所截界面上的数据与你电脑上的数据会有所不同）1. 首先进入MS DOS字符界面 2. 在MS DOS下使用ARP –d *命令清除自己电脑中MAC和IP映射表。见图1所示<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps20.jpg" alt="img"> 图1  ARP及PING命令运行结果3. 回到windows图形界面下4. 启动WireShark，开始捕获分组。5. 在MS DOS下键入Ping <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>，见图1所示。6. 回到WireShark并停止抓包 ，见图2所示。7. 查找到ARP请求和应答数据包，回答实验报告内容中的1-2题8. 查到PING命令执行时，产生的ICMP请求和应答报文，回答实验报告内容中的3-5题<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps21.jpg" alt="img"> 图2  WireShark抓包结果</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验结果（根据实验内容回答问题）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. 什么是ARP？ARP与IP的关系。 ARP，即地址解析协议，实现通bai过duIP地址得知其物理地址。以太网通信zhi需要经过二层封装后再把数据发出去，dao但是我们有时只知道对方的IP地址，而不知道对方的MAC地址，这时我们可以通过ARP请求来获取对方的MAC地址。ARP请求是广播，所以对方能收到，对方收到ARP请求后解析报文发现目的IP是自己，于是把自己的MAC地址填入ARP包头的SMAC中发回给我们，这样我们就知道了对方的MAC地址，可以进行通信了。 2. ARP请求和应答数据包的数据部分的内容是什么？代表什么意思？ <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps22.jpg" alt="img">  3. 什么是ICMP？ICMP与IP的关系。两者都是网络层的协议,ip用于网际互联,icmp用于探测ICMP是:Internet 控制信息协议（ICMP）是 IP 组的一个整合部分。它是TCP/IP协议集中的一个子协议,属于网络层协议,主要用于在主机与路由器之间传递控制信息,包括报告错误、交换受限控制和状态信息等。当遇到IP数据无法访问目标、IP路由器无法按当前的传输速率转发数据包等情况时，会自动发送ICMP消息。我们可以通过Ping命令发送ICMP回应请求消息并记录收到ICMP回应回复消息。通过这些消息来对网络或主机的故障提供参考依据 4. ICMP的请求和应答报文的头部各字段的十六进制值分别是什么，代表什么含义？数据部分的内容以及IP头部的十六进制值分别是什么？内容。<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps23.jpg" alt="img"> 数据内容：<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps24.jpg" alt="img"> Ip：<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps25.jpg" alt="img">  5. 什么是“会话”？本实验中那些协议有会话过程？IP有否“会话”？文件传输过程就是一次会话，tcp、http、icmp、ARP, 通过TCP/IP协议建立起来的会话，会话可以理解为一个应用程序。也就是说通过网络建立其连接的应用程序.6. 你主机的IP地址是什么？你所访问的主页所在服务器的IP地址是什么？（未用）主机的IP地址：172.18.3.109,baidu: 14.215.177.38<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps26.jpg" alt="img"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>成绩：**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong><em>\</em>实验名称**</strong></th>
+<th>实验四 TCP协议分析</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><em>\</em>实验时间**</strong></td>
+<td>2020年  月  日 10:00-11:40时</td>
+<td><strong><em>\</em>实验地点**</strong></td>
+<td>计通楼210</td>
+<td><strong><em>\</em>实验学时**</strong></td>
+<td>2学时</td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验类型**</strong></td>
+<td>验证</td>
+<td><strong><em>\</em>实验性质**</strong></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验环境**</strong></td>
+<td>网络环境：如实验室以太网、寝室无线局域网等硬件配置：包括CPU、主存容量、网络适配器数据率等操作系统：windows实验软件：如wireshark、IE等</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验目的**</strong></td>
+<td>1.  熟悉TCP协议的基本原理2.  利用WireShark对TCP协议进行分析</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验原理*****</strong>*（预备知识）****</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验内容（实验步骤和方法）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1.  捕获大量的由本地主机到远程服务器的TCP分组（1）  启动WireShark，开始分组捕获。（2）  启动浏览器，打开<a href="http://www.uzz.edu.cn/jsjx/index.asp" target="_blank" rel="noopener">http:// www.sina.com.cn/ </a>网页， （3）  停止分组捕获。2.  浏览追踪信息（1）  在显示筛选规则编辑框中输入“tcp”,可以看到在本地主机和服务器之间传输的一系列tcp和HTTP消息，你应该能看到包含SYN Segment的三次握手。也可以看到有主机向服务器发送的一个HTTP GET消息和一系列的“http continuation”报文。（2）  根据操作回答“四、实验报告内容”中的1-2题。3.  TCP基础   根据操作回答“四、实验报告内容”中的3-10题4.  TCP拥塞控制（1） 在WireShark已捕获分组列表子窗口中选择一个TCP 报文段。选择菜单： Statistics-&gt;TCP Stream Graph-&gt; Time-Sequence-Graph(Stevens)。你会看到如下所示的图。<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps27.png" alt="img"> （2） 根据操作回答“四、实验报告内容”中的11-12题。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验结果（根据实验内容回答问题）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. 向<a href="http://www.sina.com.cn服务器传送文件的客户端主机的IP地址和TCP端口号分别是多少？主机">www.sina.com.cn服务器传送文件的客户端主机的IP地址和TCP端口号分别是多少？主机</a> Src:172.18.3.109<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps28.jpg" alt="img">端口 src port：50946  2. <a href="http://www.sina.com.cn服务器的IP地址是多少？对这一连接，它用来发送和接收TCP报文的端口号是多少？主机">www.sina.com.cn服务器的IP地址是多少？对这一连接，它用来发送和接收TCP报文的端口号是多少？主机</a> Src:183.60.95.219<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps29.jpg" alt="img">端口 src port：443    3. 客户服务器之间用于初始化TCP连接的TCP SYN报文段的序号（sequence number）是多少？在该报文段中，是用什么来标示该报文段是SYN报文段的？报文段的序号是0，用seq来表示报文段    4. 服务器向客户端发送的SYNACK报文段序号是多少？该报文段中，Acknowledgement字段的值是多少？<a href="http://www.sina.com.cn服务器是如何决定此值的？在该报文段中，是用什么来标识该报文段是SYN">www.sina.com.cn服务器是如何决定此值的？在该报文段中，是用什么来标识该报文段是SYN</a> ACK报文段的？Sequence number：0   （relative sequence number）Acknowledgment number: 1   (relative ack number)用Flags: 0x002 (SYN)来标识该报文段 5. 包含HTTP  GET消息的TCP报文段的序号是多少？Sequence number: 1   (relative sequence number)<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps30.jpg" alt="img"> 6. <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps31.jpg" alt="img">如果将包含HTTP GET消息的TCP报文段看作是TCP连接上的第一个报文段，那么该TCP连接上的第六个报文段的序号是多少？是何时发送的？该报文段所对应的ACK是何时接收的？序号为755<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps32.jpg" alt="img"> 发送时间为10.43.05<img src="C:%5CUsers%5C18408%5CAppData%5CLocal%5CTemp%5Cksohtml18368%5Cwps33.jpg" alt="img"> 7. 前六个TCP报文段的长度各是多少？都是1400   <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps34.jpg" alt="img"> 8. 在整个跟踪过程中，接收端向发送端通知的最小可用缓存是多少？限制发送端的传输以后，接收端的缓存是否仍然不够用？最小可用缓存是15872 没有发生过<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps35.jpg" alt="img"> 9. 在跟踪文件中是否有重传的报文段？判断的依据是什么？没有，从TCP报文段的序列号中可以看出。从源端发往目的端的序号逐渐递增，如果这其中有重传的报文段，则其序号中应该有小于其临近的分组序号的分组，在图中未看到这样的分组，所以没有被重传的分组。10. TCP连接的吞吐率(bytes transferred per unit time，单位时间传输的字节数)是多少？写出你的计算过程。传输的字节数是153010传输时间是2.362480-1.153008=1.209472吞吐率（取整）=153010/1.209472=126509 byte/s11. 利用Time-Sequence-Graph(Stevens) plotting工具，浏览由客户端向服务器发送的报文段序号和时间对应关系图。你能否辨别出TCP慢启动阶段的起止，以及在何处转入避免拥塞阶段？     慢启动阶段，无避免拥塞阶段<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps36.jpg" alt="img">12. 阐述所测量到的数据与TCP理想化的行为有何不同？在慢启动阶段时，如果有网络拥塞的话，发送方会根据AIMD算法进行调整。在此实验中，在发送方还可以发送数据的时候，已经没有数据需要发送了。在Web应用中，有些web对象比较小，在慢启动还没有结束之前，传送就已经结束了，所以传送小的web对象受到TCP慢启动阶段的影响，导致较长的延迟。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>成绩：**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验名称**</strong></td>
+<td>实验五 HTTP和DNS分析</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验时间**</strong></td>
+<td>2020年  月  日 10:00-11:40时</td>
+<td><strong><em>\</em>实验地点**</strong></td>
+<td>计通楼210</td>
+<td><strong><em>\</em>实验学时**</strong></td>
+<td>2学时</td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验类型**</strong></td>
+<td>验证</td>
+<td><strong><em>\</em>实验性质**</strong></td>
+<td>必修</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验环境**</strong></td>
+<td>网络环境：如实验室以太网、寝室无线局域网等硬件配置：包括CPU、主存容量、网络适配器数据率等操作系统：windows实验软件：如wireshark、IE等</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验目的**</strong></td>
+<td>1. 熟悉并掌握WireShark的基本操作，了解网络协议实体间的交互以及报文交换。2. 分析HTTP和DNS协议</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验原理*****</strong>*（预备知识）****</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验内容（实验步骤和方法）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>1.</strong>   HTTP分析（1） 启动WireShark，开始分组捕获。（2） 启动主机上的web浏览器，在浏览器的地址栏中输入： <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>；浏览器将显示百度搜索网页。（3） 在窗口的显示过滤规则编辑框处输入“http”，分组列表子窗口中将只显示所捕获到的HTTP消息。选择分组列表窗口中的第一条http报文。它应该是你的计算机发向<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>服务器的HTTP GET报文。（4） 停止分组捕获。  根据捕获窗口内容，回答“实验报告内容”中的1-4题。2.  跟踪并分析DNS  nslookup工具允许主机向指定的DNS服务器查询某个DNS记录。如果没有指明DNS服务器，nslookup将把查询请求发向默认的DNS服务器。  nslookup的一般格式是：  nslookup –option1 –option2 host-to-find dns-server  ipconfig命令用来显示你当前的TCP/IP信息，包括：你的地址、DNS服务器的地址、适配器的类型等信息。如果，要显示与主机相关的信息用命令：  ipconfig/all  如果查看DNS缓存中的记录用命令：   ipconfig/displaydns  要清空DNS缓存，用命令：  ipconfig /flushdns  运行以上命令需要进入MSDOS环境。(开始菜单－&gt;运行－&gt;输入命令“cmd”)（1） 利用ipconfig命令清空主机上的DNS缓存。启动浏览器，并将浏览器的缓存清空。（2） 启动WireShark，在显示过滤筛选规则编辑框处输入：    “ip.addr = = your_IP_address”(如：ip.addr= =10.17.7.23)    过滤器将会删除所有目的地址和源地址与指定IP地址都不同的分组。（3）  开始WireShark分组捕获。（4）  在浏览器的地址栏中输入：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>后，回车。（5）  停止分组捕获。（6）  根据操作回答“实验报告内容”中的5-8题。 （7） 开始WireShark分组捕获。（8）  <a href="http://www.sin.com上进行nslookup（即执行命令：nslookup">www.sin.com上进行nslookup（即执行命令：nslookup</a>  <a href="http://www.sin.com）。（9）" target="_blank" rel="noopener">www.sin.com）。（9）</a>  停止分组捕获。（10）  根据操作回答“实验报告内容” 中的 9-11题。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>实验结果（根据实验内容回答问题）**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>此页不够可加页<strong>1.</strong> HTTP分析（1） 从发出HTTP GET消息到接收到HTTP OK响应报文共需要多长时间？（在默认的情况下，分组列表窗口中Time列的值是从WireShark开始追踪到分组被捕获时总的时间， 以秒为单位。若要按time-of-day格式显示Time列的值，需选择View下拉菜单，再选择Time Display Format，然后选择Time-of-day。）共需 （2） <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps37.jpg" alt="img">写出第3步所显示的HTTP消息头部行信息并说明其含义？  （3） <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps38.jpg" alt="img">你的浏览器使用的是HTTP1.0，还是HTTP1.1？你所访问的Web服务器所使用HTTP协议的版本号是多少？ <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps39.jpg" alt="img">   <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps40.jpg" alt="img">都是 HTTP1.1 （4） 从服务器向你的浏览器返回response消息的状态代码是多少？表示什么意思？ 状态代码是302，表示重定向，如果完成请求还必须采取进一步的行动。2.  跟踪并分析DNS（5） 定位到DNS查询消息和查询响应报文，这两种报文的发送是基于UDP还是基于TCP的？ <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps41.jpg" alt="img">)<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps42.jpg" alt="img"> 都是UDP   （6） <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps43.jpg" alt="img">DNS查询消息的目的端口号是多少？DNS查询响应消息的源端口号是多少？ 目的端口号是53，DNS查询响应消息的源端口号是53。 （7） DNS查询消息发送的目的地的IP地址是多少？利用ipconfig命令（ipconfig/all查看你主机的本地DNS服务器的IP地址。这两个地址相同吗？<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps44.jpg" alt="img"> DNS查询消息发送的目的地的IP地址是222.246.129.80；这两个地址相同 （8） 考虑一下你的主机随后发送的TCP SYN Segment， 包含SYN Segment的IP分组头部中目的IP地址是否与在DNS查询响应消息中提供的某个IP地址相对应？<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps45.jpg" alt="img">与源地址ip相同，DNS目的ip不同。 <img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps46.jpg" alt="img"> （9） DNS查询消息的目的端口号是多少？DNS查询响应消息的源端口号是多少？ DNS查询消息的目的端口号是53，DNS查询响应消息的源端口号是53 （10） DNS查询消息发送的目的地的IP地址是多少？这个地址是你的默认本地DNS服务器的地址吗？<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps47.jpg" alt="img"> DNS查询消息发送的目的地的IP地址是222.246.129.80；这两个地址相同 （11） 检查DNS查询响应消息，其中提供了多少个“answers”？每个answers包含哪些内容？<img src="https://cdn.jsdelivr.net/gh/xiaohongri/Yafine-imgs/images/wps48.jpg" alt="img"> 检查DNS查询响应消息，其中提供了1个“answers”，</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><em>\</em>成绩：**</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://yoursite.com" rel="external nofollow noreferrer">weierxiao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://yoursite.com/2020/12/12/%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">http://yoursite.com/2020/12/12/%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://yoursite.com" target="_blank">weierxiao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'WD8cID7kCG47aU1ivrPujeI7-gzGzoHsz',
+        appKey: 'K2nSmY7BYj6EAFhdT4L4WENC',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/12/12/%E8%AE%A1%E7%BD%91%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="计网实验报告">
+                        
+                        <span class="card-title">计网实验报告</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+
+
+\实验名称**
+实验1  WireShark的使用
+
+
+
+
+
+
+
+\实验时间**
+2020年10月7日 10:00-11:40时
+\实验地点**
+计通楼210
+\实验学时**
+2学时
+
+
+\实验类型**
+验证
+\实验性质**
+必修
+
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            weierxiao
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/01/%E9%A2%9C%E8%89%B2%E8%A1%A8%E5%8F%8Ahtml%E4%BB%A3%E7%A0%81/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="颜色表及html代码">
+                        
+                        <span class="card-title">颜色表及html代码</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            http://xh.5156edu.com/page/z1015m9220j18754.html
+
+        document.querySelectorAll('.github-emoji')
+          .forEach(
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            weierxiao
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="http://yoursite.com" target="_blank">weierxiao</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">58.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/xiaohongri" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:357246737@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=357246737&website=www.oicqzone.com" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4164331&auto=1&height=66"></iframe>
+
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "喔喔喔~", clearTimeout(st)) : (document.title =
+            "哈哈哈，你又来啦！", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+<!-- 1 -->
+<script type="text/javascript">
+WIDGET = {FID: 'BuNtFVKh7u'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+<!--烟花爆炸效果
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+-->
+
+<script type="text/javascript">
+//只在桌面版网页启用特效
+var windowWidth = $(window).width();
+if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+}
+</script>
+
+
+<!--看版娘-->
+<script type="text/javascript" charset="utf-8"  src="./L2Dwidget.0.min.js"></script>
+<script type="text/javascript" charset="utf-8"  src="./L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    L2Dwidget.init({"display": {
+        "superSample": 2,
+        "width": 200,
+        "height": 400,
+             "position": "right",
+                 "hOffset": 0,
+        "vOffset": 0
+          }
+     });
+</script>
+
+</html>
